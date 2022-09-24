@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      const arr = [10, 20, 30, 40, 50];
+
+      const data = [
+        { id: 1, name: '홍길동1', age: 201 },
+        { id: 2, name: '홍길동2', age: 240 },
+        { id: 3, name: '홍길동3', age: 260 },
+        { id: 4, name: '홍길동4', age: 270 },
+        { id: 5, name: '홍길동5', age: 280 },
+      ];
+
+      const re1 = arr.find((item) => item === 10);
+      console.log(re1);
+
+      const data1 = data.find((item) => item.id === 4);
+      console.log(data1);
+    </script>
+  </head>
+  <body>
+    <!-- 
+ 
+
+  -->
+    <pre>
+      find, findIndex :
+      둘 다 조건이다.
+
+
+      find:
+      filter랑 비슷함.
+
+
+
+      구문
+      arr.find(callback[, thisArg])
+      
+      arr.find(함수[현재값]{
+        return 조건
+      })
+      arr.find(현재값 => 조건)
+
+
+      매개변수
+
+      callback:
+      함수
+
+      element:
+      현재 요소
+      
+      반환 값
+      주어진 판별 함수를 만족하는 첫 번째 요소의 값. 그 외에는 undefined.
+
+
+
+
+
+
+
+
+
+
+
+
+      findIndex
+    </pre>
+  </body>
+</html>

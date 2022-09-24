@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      const names = ['김태리', '강호동', '유재석', '김다미'];
+
+      const data = [
+        { id: 1, name: '홍길동1' },
+        { id: 2, name: '홍길동2' },
+        { id: 3, name: '홍길동3' },
+        { id: 4, name: '홍길동4' },
+        { id: 5, name: '홍길동5' },
+      ];
+
+      const data1 = data.map((item) => {
+        if (item.id === 2) {
+          return {
+            ...item,
+            name: '김영희',
+          };
+        } else {
+          return item;
+        }
+      });
+      console.log(data1);
+
+      //======================================
+      //위에것보다 아래쪽게 더 많이 씀
+      const data2 = data.map((item) =>
+        item.id === 3 ? { ...item, name: '김다미' } : item
+      );
+      console.log(data2);
+    </script>
+  </head>
+  <body>
+    <!-- 
+ 
+
+  -->
+    <pre>
+
+      *** 중요
+    </pre>
+  </body>
+</html>

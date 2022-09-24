@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      const names = ['김태리', '강호동', '유재석', '김다미'];
+      const data1 = names.concat();
+
+      //names를 복사해서 가져다가 쓸 수 있다.
+      const data2 = [...names];
+      console.log(data1);
+      console.log(data2);
+      console.log('\n');
+      //위의 두 콘솔 값은 같다
+
+      // ===========================================================
+
+      const data3 = names.concat('송혜교', '전지현');
+      // 데이터를 추가 할 수도 있다.
+      const data4 = [...names, '송혜교', '전지현'];
+      console.log(data3);
+      console.log(data4);
+      console.log('\n');
+      //위의 두 콘솔 값은 같다
+
+      // ===========================================================
+
+      const data = [
+        { id: 1, name: '홍길동1' },
+        { id: 2, name: '홍길동2' },
+        { id: 3, name: '홍길동3' },
+      ];
+      const data5 = data.concat();
+      const data6 = [...data];
+      const data7 = data.concat({ id: 4, name: '홍길동4' });
+      const data8 = [...data, { id: 5, name: '홍길동5' }];
+      console.log(data5);
+      console.log(data6);
+      console.log(data7);
+      console.log(data8);
+      console.log('\n');
+
+      //스프레드 연산자가 더 강력
+
+      const dog = {
+        name: '치와와',
+        age: 3,
+      };
+
+      const dog1 = { ...dog };
+      console.log(dog1);
+
+      //스프레드 연산자를 쓰면
+      // 갱신, 수정 , 업데이트 됨.
+      const dog2 = { ...dog, name: '푸들', age: 1 };
+      console.log(dog2);
+      //결과  name: '푸들', age: 1
+    </script>
+  </head>
+  <body>
+    <!-- 
+ 
+
+  -->
+    <pre>
+      *** 중요
+    </pre>
+  </body>
+</html>

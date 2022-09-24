@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <!-- 바벨의 CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+  <body>
+    <div id="root">화면에 보이는 영역</div>
+    <script type="text/babel">
+      const name = '홍길동';
+      const age = 20;
+      const addr = '서울';
+      const tel = '010-1234-5678';
+
+      // const el = React.createElement('태그명', 속성, '컨텐츠');
+      // 위의 구문처럼이 아닌 아래 태그 처럼 코드형식으로 해도 잘 나온다.
+      // 하지만 브라우저가 구버전이라면 아래와 같이 썼을 때 인식을 하지 못한다.
+
+      const el = (
+        <div>
+          <h2>신상명세서</h2>
+          <p>이름 : {name}</p>
+          <p>나이 : {age}</p>
+          <p>주소 : {addr}</p>
+          <p>전화 : {tel}</p>
+        </div>
+      );
+
+      //https://babeljs.io/ 에서 아래 내용들을 컴파일하면 된다
+
+      // const name = '홍길동';
+      // const age = 20;
+      // const addr = '서울';
+      // const tel = '010-1234-5678';
+      // const el = (
+      //   <div>
+      //     <h2>신상명세서</h2>
+      //     <p>이름 : {name}</p>
+      //     <p>나이 : {age}</p>
+      //     <p>주소 : {addr}</p>
+      //     <p>전화 : {tel}</p>
+      //   </div>
+      // );
+
+      const dom = document.querySelector('#root');
+
+      ReactDOM.render(el, dom);
+    </script>
+  </body>
+</html>

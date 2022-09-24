@@ -1,0 +1,114 @@
+
+https://create-react-app.dev/docs/getting-started/
+
+//터미널 단축키
+ctrl+`
+
+
+
+// 프로젝트 폴더를 생성
+yarn create react-app 프로젝트명
+
+// 프로젝트 폴더에 접근
+cd 프로젝트명
+
+// 참고 : 폴더에서 나가는법
+cd ..
+
+// 프로젝트 실행
+yarn start
+
+// node_modules의 역할? 
+리액트가 의존하는 명령어
+
+// public > index.html
+<div id="root">화면에 보이는 내용</div>
+
+// src > index.js
+<App /> 안에 root 가 들어감
+
+
+// App.js
+function App() {
+  return (
+    <section className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <h2>지금은 연습중</h2>
+      </header>
+    </section>
+  );
+}
+
+// 리액트는 선언형 프로그래밍
+
+//넥스트 js 를 하면 클래스형도 알아야함
+
+
+
+//App.js
+다지우고
+rsc 입력
+
+
+//test.js
+rsc 입력
+
+
+// react 젠코딩
+
+파일 > 기본 설정 > 설정
+
+Window 이용자 : Ctrl + ,
+
+Mac 이용자 : Command + ,
+
+​
+
+작업영역(WorkSpace setting)
+
+​
+
+Include Languages 검색
+
+addItem 부분에 
+
+key : javascript / vaue : javascriptreact
+
+
+
+
+
+//젠코딩 하는 법
+
+article*4>h3{타이틀$} 
+
+입력
+
+<article>
+  <h3>타이틀1</h3>
+</article>
+<article>
+  <h3>타이틀2</h3>
+</article>
+<article>
+  <h3>타이틀3</h3>
+</article>
+<article>
+  <h3>타이틀4</h3>
+</article>
+
+
+
+// 집에서 공부하려면
+노드모듈스를 뺀 나머지를 복사해서 붙여넣기 해서 사용한다.
+
+
+
+
+
+
+

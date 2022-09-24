@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      let obj = {
+        name: '김철수',
+        age: 23,
+        addr: '서울',
+        tel: '010-1234-5678',
+      };
+      console.log('이름 : %s', obj.name);
+      console.log('나이 : %d', obj.age);
+      console.log('주소 : %s', obj.addr);
+      console.log('전화 : %s', obj['tel']);
+      console.log('\n');
+
+      //비구조할당, 구조분해
+      const { name, age, addr, tel } = obj;
+      console.log('이름 : %s', name);
+      console.log('나이 : %d', age);
+      console.log('주소 : %s', addr);
+      console.log('전화 : %s', tel);
+      console.log('\n');
+
+      const data = {
+        a: 10,
+        b: 20,
+        c: 30,
+      };
+
+      //data.a, data.b ,data.c
+      const { a, b, c } = data;
+      console.log('\n');
+    </script>
+  </head>
+  <body>
+    <!-- 
+ 
+
+  -->
+    <pre>
+*** 중요
+
+
+    </pre>
+  </body>
+</html>

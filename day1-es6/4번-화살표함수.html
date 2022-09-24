@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      function make1() {
+        console.log('test');
+      }
+      make1();
+
+      const make2 = () => {
+        console.log('test');
+      };
+      make2();
+
+      function make3(num) {
+        console.log(num);
+      }
+      make3(100);
+
+      // 매개 값이 하나뿐이면 ()괄호를 제거해주고 사용 가능하다
+
+      const make4 = (num) => {
+        console.log(num);
+      };
+      make4(100);
+
+      const make5 = (num1, num2) => {
+        console.log(num1, num2);
+      };
+
+      make5(100, 200);
+
+      const make5 = (num1, num2) => {
+        console.log(num1, num2);
+      };
+      make5(100, 200);
+
+      const make10 = make(10) => {
+        console.log(make10)
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 
+ 
+
+  -->
+    <pre></pre>
+  </body>
+</html>

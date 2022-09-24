@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <!-- 바벨의 CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+  <body>
+    <div id="root">화면에 보이는 영역</div>
+    <script type="text/babel">
+      // const el = React.createElement('태그명', 속성, '컨텐츠');
+      const el = React.createElement('h1', {}, '제목입니다');
+      const dom = document.querySelector('#root');
+
+      ReactDOM.render(el, dom);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      // let const 등으로 바꿔서 확인해보기
+      const a = 100;
+      //      a= 50;
+      console.log(a);
+      {
+        const a = 200;
+        console.log(a);
+        {
+          const a = 300;
+          console.log(a);
+          {
+            const a = 400;
+            console.log(a);
+          }
+          console.log(a);
+        }
+        console.log(a);
+      }
+      console.log(a);
+    </script>
+  </head>
+  <body>
+    <pre>
+      let : 선언 재할당
+      let 변수;
+      변수= 값
+      let 변수 = 값;
+      const : 선언과 동시 할당
+      const 변수 = 값
+      <!-- 리액트는 세미콜론은 필수가 아니다 -->
+      <!-- const 를 많이 쓴다 -->
+    </pre>
+  </body>
+</html>

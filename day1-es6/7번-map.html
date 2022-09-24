@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      const arr = [10, 20, 30, 40, 50];
+      arr.map((item, index) => {
+        return console.log(index, item);
+      });
+      console.log(`\n`);
+      arr.map((item, index) => console.log(index, item));
+
+      const data = [
+        { id: 1, name: '홍길동1', age: 201 },
+        { id: 2, name: '홍길동2', age: 240 },
+        { id: 3, name: '홍길동3', age: 260 },
+        { id: 4, name: '홍길동4', age: 270 },
+        { id: 5, name: '홍길동5', age: 280 },
+      ];
+      const data1 = data.map((item, index) => {
+        return console.log(item.id, item.name, item.age);
+      });
+      //위의 내용을 아래 처럼 줄여 쓸수 있다.
+      data.map((item, index) => console.log(item.id, item.name, item.age));
+    </script>
+  </head>
+  <body>
+    <!-- 
+ 
+
+  -->
+    <pre>
+      배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다<div class=""></div>
+      
+      구문
+      arr.map(callback(currentValue[, index[, array]])[, thisArg])
+
+      arr.map(함수 (현재값, 인덱스){
+        return 반환값
+      })
+
+      arr.map( function (현재값, 인덱스){
+        return 반환값
+      })
+
+      // 실수 ? {} 함수 return 필수다. 절대 생략하지 말자!!
+      arr.map(  (현재값, 인덱스){
+        return 반환값
+      })
+
+      //아래 내용 매우 중요
+      결과가 1개 (한줄)이면 {}과 return을 생략가능하다
+      arr.map(  (현재값, 인덱스) => 반환값)
+
+
+  매개변수
+
+  callback : 함수
+  새로운 배열 요소를 생성하는 함수. 다음 세 가지 인수를 가집니다.
+  
+  currentValue: 현재 요소.
+  
+  index Optional: 인덱스 - 선택
+  처리할 현재 요소의 인덱스.
+  
+  
+  반환값은 새로운 배열을 반환한다.
+
+    </pre>
+  </body>
+</html>
