@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Step2 = ({ job, email, gender, inter, changeInput }) => {
+const Step2 = ({ job, email, gender, inter, changeInput, onNext, onPrev }) => {
   return (
     <div>
       <h3>Step 2</h3>
@@ -26,8 +26,8 @@ const Step2 = ({ job, email, gender, inter, changeInput }) => {
         <input type="text" name="inter" value={inter} onChange={changeInput} />
       </p>
       <p>
-        <button>이전</button>
-        <button>다음</button>
+        <button onClick={onPrev}>이전</button>
+        <button onClick={onNext}>다음</button>
       </p>
     </div>
   );

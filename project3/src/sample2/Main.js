@@ -69,7 +69,8 @@ const Main = () => {
       아래와 같이 만든다.      
       */}
       {/* 10. onNext={onNext} 추가 */}
-      {step === 1 && (
+
+      {/* {step === 1 && (
         <Step1
           username={username}
           age={age}
@@ -78,7 +79,17 @@ const Main = () => {
           changeInput={changeInput}
           onNext={onNext}
         />
+      )} */}
+      {/* 12.위의 주석과 같다. 아래와 같이 obj={obj} 쓰면  username={username}
+          age={age}
+          addr={addr}
+          tel={tel}
+          을 쓰지 않아도 된다.
+          */}
+      {step === 1 && (
+        <Step1 obj={obj} changeInput={changeInput} onNext={onNext} />
       )}
+      {/* step2는 그냥 수정 안 */}
       {step === 2 && (
         <Step2
           job={job}
@@ -86,10 +97,20 @@ const Main = () => {
           gender={gender}
           inter={inter}
           changeInput={changeInput}
+          onNext={onNext}
+          onPrev={onPrev}
         />
       )}
-      {step === 3 && <Step3 />}
-      {step === 4 && <Step4 />}
+      {step === 3 && (
+        <Step3
+          // obj={obj}
+          {...obj}
+          changeInput={changeInput}
+          onNext={onNext}
+          onPrev={onPrev}
+        />
+      )}
+      {step === 4 && <Step4 username={username} />}
     </div>
   );
 };

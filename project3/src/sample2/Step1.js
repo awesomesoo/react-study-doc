@@ -1,7 +1,8 @@
 import React from 'react';
 // 6. username, age, addr, tel, changeInput 를 props 해준다.
 //11. onNext 추가
-const Step1 = ({ username, age, addr, tel, changeInput, onNext }) => {
+const Step1 = ({ obj, changeInput, onNext }) => {
+  const { username, age, addr, tel } = obj;
   return (
     <div>
       <h3>Step 1</h3>
