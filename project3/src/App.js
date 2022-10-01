@@ -1,7 +1,12 @@
 // import './assets/css/reset.css'
+import Test1 from './components/Test1';
 
 const App = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Test1 />
+    </div>
+  );
 };
 
 export default App;
