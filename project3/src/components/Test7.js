@@ -24,8 +24,8 @@ const Test7 = () => {
         checked={isChek}
         onChange={changeInput}
       />
-      {isChek === true ? '보이기' : '숨기기'}
-      {isChek === true ? <div style={css1}>1</div> : <div style={css1}>2</div>}
+      {isChek ? '보이기' : '숨기기'}
+      {isChek ? <div style={css1}>1</div> : <div style={css1}>2</div>}
     </div>
   );
 };
