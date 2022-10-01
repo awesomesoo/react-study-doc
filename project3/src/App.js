@@ -1,12 +1,7 @@
-import './assets/css/reset.css'
-import Business from './sample/Business';
+// import './assets/css/reset.css'
 
 const App = () => {
-  return (
-    <div>
-       <Business />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default App;

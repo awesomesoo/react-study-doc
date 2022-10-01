@@ -1,9 +1,5 @@
-import React, { useState } from 'react';
-import BusinessList from './BusinessList';
-import dataList from '../assets/api/businessData';
-import './style.css';
-
-/* const dataList = [
+// 컴포넌트가 아니라서 소문자로 해도 됨
+const aaa = [
   {
     id: 1,
     imgurl: 'http://www.kyungdong.co.kr/ko/front/image/main/sec01_img01.jpg',
@@ -32,25 +28,7 @@ import './style.css';
     eng: 'Building Lease',
     des: '적한 사무환경, 우수한 교통접근성은 경동빌딩의 자랑입니다.',
   },
-]; */
+];
 
-const Business = () => {
-  const [data, setData] = useState(dataList);
-
-  return (
-    <section className="business">
-      <div className="inner">
-        <h2>BUSINESS</h2>
-        <p>고객이 신뢰하는 글로벌 에너지 자원 선도 기업</p>
-
-        <BusinessList data={data} />
-        {/* 하다보면 헷갈리기 때문에 porps명을 동일 하게 쓰면 헷갈리지 않는다. 다르게 써도 상관은 없다. */}
-        <p className="more">
-          <a href="#">View More</a>
-        </p>
-      </div>
-    </section>
-  );
-};
-
-export default Business;
+// 내보내기는 두가지가 있다.
+export default aaa;
