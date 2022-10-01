@@ -86,6 +86,14 @@ const Main = () => {
           tel={tel}
           을 쓰지 않아도 된다.
           */}
+
+      {/* 
+        아래 3 줄은 각각 결과 값이 같다.
+        <Step1 username={username} age={age} addr={addr} tel={tel} changeInput={changeInput} onNext={onNext}/>
+        <Step1 obj={obj} changeInput={changeInput} onNext={onNext}/>
+        <Step1 {...obj} changeInput={changeInput} onNext={onNext} />
+      */}
+
       {step === 1 && (
         <Step1 obj={obj} changeInput={changeInput} onNext={onNext} />
       )}
