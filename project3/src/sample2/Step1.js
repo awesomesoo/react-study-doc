@@ -1,8 +1,10 @@
 import React from 'react';
 // 6. username, age, addr, tel, changeInput 를 props 해준다.
-const Step1 = ({ username, age, addr, tel, changeInput }) => {
+//11. onNext 추가
+const Step1 = ({ username, age, addr, tel, changeInput, onNext }) => {
   return (
     <div>
+      <h3>Step 1</h3>
       <p>
         <label>이름</label>
         <input
@@ -25,7 +27,8 @@ const Step1 = ({ username, age, addr, tel, changeInput }) => {
         <input type="text" name="tel" value={tel} onChange={changeInput} />
       </p>
       <p>
-        <button>다음</button>
+        {/* 12. onNonClick={onNext}ext 추가 */}
+        <button onClick={onNext}>다음</button>
       </p>
     </div>
   );
