@@ -1,0 +1,19 @@
+import React from 'react';
+
+const Test8Modal = ({ hide }) => {
+  return (
+    <>
+      {/* 배경을 눌러도 닫힘 */}
+      <div className="bg" onClick={hide}></div>
+      {/* 닫기 버튼 누르면 닫힘 */}
+      <div className="popup">
+        <h2>팝업</h2>
+        <p className="closex" onClick={hide}>
+          X
+        </p>
+      </div>
+    </>
+  );
+};
+
+export default Test8Modal;
