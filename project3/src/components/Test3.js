@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 const Test3 = () => {
   const [userid, setUserid] = useState('');
   const [userpw, setUserpw] = useState('');
+  const idRef = useRef(null);
+  // const idRef = useRef(); 이것처럼 null을 생략해도 된다.
 
   const changeInput1 = (e) => {
     // setUserid(e.target.value);
@@ -16,16 +18,17 @@ const Test3 = () => {
     const { value } = e.target;
     setUserpw(value);
   };
-  const onReset = (e) => {
+  const onReset = () => {
     setUserid('');
     setUserpw('');
+    idRef.current.focus();
     // 위의 두줄만 쓰면 h3에 있는 텍스트는 사라졌지만 , input 에 있는 벨류는 초기화되지 않았다.
   };
   return (
     <div>
       {/* 폼에 관련된 것은 onChange */}
-      <input type="text" value={userid} onChange={changeInput1} />
-      <input type="text" vlaue={userpw} onChange={changeInput2} />{' '}
+      <input type="text" value={userid} onChange={changeInput1} ref={idRef} />
+      <input type="text" value={userpw} onChange={changeInput2} />{' '}
       {/* value={userid},  vlaue={userpw} 를 써줘야 값을 넘겨줘서 초기화 된다. */}
       <button onClick={onReset}>초기화</button>
       <hr />
