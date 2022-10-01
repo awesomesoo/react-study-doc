@@ -4,7 +4,7 @@
 // import Test3 from './components/Test3';
 // import Test4 from './components/Test4';
 
-import Test9 from './components/Test9';
+import Test10 from './components/Test10';
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
       {/* <Test2 />
       <Test3 />
       <Test4 /> */}
-      <Test9 />
+      <Test10 />
     </div>
   );
 };
