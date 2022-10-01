@@ -17,3 +17,4 @@ const Test8Modal = ({ hide }) => {
 };
 
 export default Test8Modal;
+// 부모컴포넌트에서 hide라는 함수를 받아서 사용하는 법
