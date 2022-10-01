@@ -1,5 +1,5 @@
 import React from 'react';
-
+// 팝업의 내용
 const Test8Modal = ({ hide }) => {
   return (
     <>

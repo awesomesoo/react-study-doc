@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Test8Modal from './Test8Modal';
 import './Test8.css';
 
+// 팝업 띄우기 전 화면
 const Test8 = () => {
   const [isopen, setIsopen] = useState(false);
   const show = () => {
