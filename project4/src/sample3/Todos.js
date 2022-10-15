@@ -25,7 +25,9 @@ const Todos = () => {
 
   // 수정
   const onMod = (id) => {
-    setData(data.map((item) => (item.id === id ? {} : item)));
+    setData(
+      data.map((item) => (item.id === id ? { ...item, isChk: true } : item))
+    );
   };
 
   return (
