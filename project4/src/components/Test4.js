@@ -11,6 +11,7 @@ const dataList = [
 const Test4 = () => {
   const [data, setData] = useState(dataList); // state가 들어왔는지 개발자모드로 확인하기
 
+  // 삭제
   const onDel1 = () => {
     setData(data.filter((item) => item.text !== '하나'));
   };
@@ -23,6 +24,7 @@ const Test4 = () => {
     setData(data.filter((item) => item.id !== idDDD));
   };
 
+  // 추가
   const onAdd12 = () => {
     setData([{ id: data.length + 1, text: '유재석' }]); // 유재석만이라는 객체만 추가된다.
   };
@@ -44,6 +46,11 @@ const Test4 = () => {
     // setData([...data, { id: data.length + 1, text: name }]);
     setData([...data, { id: data.length + 1, text }]);
   };
+
+  // 수정
+  const onMod1 = () => {};
+  const onMod2 = () => {};
+  const onMod = () => {};
 
   return (
     <div style={{ marign: 30 }}>
@@ -84,9 +91,9 @@ const Test4 = () => {
       </p>
       <h3>수정</h3>
       <p>
-        <button>수정</button>
-        <button>수정</button>
-        <button>수정</button>
+        <button onClick={onMod1}>수정</button>
+        <button onClick={onMod2}>수정</button>
+        <button onClick={() => onMod(1)}>수정</button>
       </p>
 
       <hr />
@@ -94,7 +101,7 @@ const Test4 = () => {
       <ul>
         {data.map((item) => (
           <li key={item.id}>
-            {item.id}/ {item.text}
+            {item.id} / {item.text}
           </li>
         ))}
       </ul>
