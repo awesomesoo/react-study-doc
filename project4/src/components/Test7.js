@@ -11,7 +11,15 @@ const Test7 = () => {
     setText(value);
   };
 
-  const onAdd = () => {
+  const onAdd = (e) => {
+    // 새로고침 기본기능 차단
+    e.preventDefault();
+    // if (text.length === 0) {
+    //   return;
+    // }
+    // 밖으로 빠질수 있게.
+    if (!text) return; //!text 값이 존재하지 않거나 false일 떄.
+
     setData([...data, { id: no.current++, text: text }]);
     setText('');
     textRef.current.focus();
@@ -19,10 +27,17 @@ const Test7 = () => {
 
   return (
     <div>
-      <p>
+      {/* <p>
         <input type="text" value={text} onChange={changeInput} ref={textRef} />
-        <button onClick={onAdd}>추가</button>
-      </p>
+        <button onClick={onAdd}>
+          추가
+        </button>
+      </p> */}
+      <form onSubmit={onAdd}>
+        <input type="text" value={text} onChange={changeInput} ref={textRef} />
+        <button type="submit">추가</button>
+      </form>
+
       <ul>
         {data.map((item) => (
           <li key={item.id}>
@@ -35,3 +50,19 @@ const Test7 = () => {
 };
 
 export default Test7;
+/* 
+const textRef = useRef(null);
+textRef.current.focus();
+<input type="text" ref={textRef} />
+*/
+
+/* 
+form 태그의 특징
+
+(e) => {
+  e.preventDefault();
+  if (text.length === 0) {
+    return;
+  }
+onSubmit={onAdd}
+*/

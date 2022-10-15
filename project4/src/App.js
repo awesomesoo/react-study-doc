@@ -1,10 +1,13 @@
 import './App.css';
-import Test7 from './components/Test7';
+import Todos from './sample1/Todos';
+import './assets/api/css/reset.css';
+// import Test7 from './components/Test7';
 
 function App() {
   return (
     <div>
-      <Test7 />
+      {/* <Test7 /> */}
+      <Todos />
     </div>
   );
 }
