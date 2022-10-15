@@ -13,12 +13,14 @@ const Test7 = () => {
 
   const onAdd = () => {
     setData([...data, { id: no.current++, text: text }]);
+    setText('');
+    textRef.current.focus();
   };
 
   return (
     <div>
       <p>
-        <input type="text" value={text} onChange={changeInput} />
+        <input type="text" value={text} onChange={changeInput} ref={textRef} />
         <button onClick={onAdd}>추가</button>
       </p>
       <ul>
