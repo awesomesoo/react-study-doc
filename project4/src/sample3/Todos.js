@@ -21,8 +21,6 @@ const Todos = () => {
   // 추가
   const onAdd = (text) => {
     setData([...data, { id: no.current++, text }]);
-    // setText('');
-    // textRef.current.focus();
   };
 
   return (

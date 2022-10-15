@@ -11,8 +11,12 @@ const TodoFrom = ({ onAdd }) => {
   };
 
   const onSubmit = (e) => {
-    e.preventDefault();
-    onAdd();
+    e.preventDefault(); // 새로고침 차단
+    if (!text) return; // 공백 값 처리
+
+    onAdd(text);
+    setText('');
+    textRef.current.focus();
   };
   return (
     <form className="TodoForm" onSubmit={onSubmit}>
