@@ -23,11 +23,16 @@ const Todos = () => {
     setData([...data, { id: no.current++, text, isChk: false }]);
   };
 
+  // 수정
+  const onMod = () => {
+    
+  };
+
   return (
     <div className="Todos">
       <h1>할 일 기록하기</h1>
       <TodoFrom onAdd={onAdd} data={data} />
-      <TodoList data={data} onDel={onDel} />
+      <TodoList data={data} onDel={onDel} onMod={onMod} />
     </div>
   );
 };
