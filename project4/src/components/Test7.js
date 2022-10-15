@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 const Test7 = () => {
   const [data, setData] = useState([]);
   const [text, setText] = useState('');
+  const no = useRef(data.length + 1);
+  const textRef = useRef(null);
 
   const changeInput = (e) => {
     const { value } = e.target;
     setText(value);
   };
 
-  const onAdd = () => {};
+  const onAdd = () => {
+    setData([...data, { id: no.current++, text: text }]);
+  };
 
   return (
     <div>
