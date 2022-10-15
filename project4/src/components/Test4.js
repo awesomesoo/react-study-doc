@@ -48,9 +48,39 @@ const Test4 = () => {
   };
 
   // 수정
-  const onMod1 = () => {};
-  const onMod2 = () => {};
-  const onMod = () => {};
+  const onMod1 = () => {
+    setData(
+      data.map((item) => {
+        if (item.id === 2) {
+          // return {}; // 값이(id,text) 사라졌다.
+          return { ...item, text: 'id가 2인 text를 수정했습니다.' };
+        } else {
+          return item;
+        }
+      })
+    );
+  };
+  const onMod2 = () => {
+    // setData(data.map(item => item.id === 4 ? {} : item));  // 괄호 없어도 됨
+    // setData(data.map((item) => (item.id === 4 ? {} : item)));
+    setData(
+      data.map((item) =>
+        item.id === 4
+          ? { ...item, text: 'id가 4인 text를 수정했습니다.' }
+          : item
+      )
+    );
+  };
+  // const onMod = (id) => { setData(data.map(item => item.id === id ? {} : item))};
+  const onMod = (id) => {
+    setData(
+      data.map((item) =>
+        item.id === id
+          ? { ...item, text: 'id가 5인 text를 수정했습니다.' }
+          : item
+      )
+    );
+  };
 
   return (
     <div style={{ marign: 30 }}>
@@ -91,9 +121,9 @@ const Test4 = () => {
       </p>
       <h3>수정</h3>
       <p>
-        <button onClick={onMod1}>수정</button>
-        <button onClick={onMod2}>수정</button>
-        <button onClick={() => onMod(1)}>수정</button>
+        <button onClick={onMod1}>id가 2의 text를 수정</button>
+        <button onClick={onMod2}>id가 4의 text를 수정</button>
+        <button onClick={() => onMod(5)}>id가 5인 text를 수정</button>
       </p>
 
       <hr />
