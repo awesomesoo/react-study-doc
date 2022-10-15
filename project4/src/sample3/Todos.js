@@ -4,9 +4,9 @@ import TodoList from './TodoList';
 import './Todos.css';
 
 const dataList = [
-  { id: 1, text: '운동하기' },
-  { id: 2, text: '친구만나기' },
-  { id: 3, text: '퇴근하기' },
+  { id: 1, text: '운동하기', isChk: false }, // 이름 맘대로 해도 됨. isChk
+  { id: 2, text: '친구만나기', isChk: true },
+  { id: 3, text: '퇴근하기', isChk: false },
 ];
 
 const Todos = () => {
@@ -20,7 +20,7 @@ const Todos = () => {
 
   // 추가
   const onAdd = (text) => {
-    setData([...data, { id: no.current++, text }]);
+    setData([...data, { id: no.current++, text, isChk: false }]);
   };
 
   return (
