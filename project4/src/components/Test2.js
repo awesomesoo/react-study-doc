@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import dataList from '../api/testDate';
-import { testList } from '../api/testDate';
+import { testList } from '../assets/api/testDate';
 
 const Test2 = () => {
   const [data, setData] = useState(testList);
