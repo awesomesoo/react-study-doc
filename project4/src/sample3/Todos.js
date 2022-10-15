@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import TodoFrom from './TodoFrom';
 import TodoList from './TodoList';
 import './Todos.css';
@@ -11,16 +11,24 @@ const dataList = [
 
 const Todos = () => {
   const [data, setData] = useState(dataList);
+  const no = useRef(data.length + 1);
 
   // 삭제
   const onDel = (id) => {
     setData(data.filter((item) => item.id !== id));
   };
 
+  // 추가
+  const onAdd = (text) => {
+    setData([...data, { id: no.current++, text }]);
+    // setText('');
+    // textRef.current.focus();
+  };
+
   return (
     <div className="Todos">
       <h1>할 일 기록하기</h1>
-      <TodoFrom />
+      <TodoFrom onAdd={onAdd} data={data} />
       <TodoList data={data} onDel={onDel} />
     </div>
   );
