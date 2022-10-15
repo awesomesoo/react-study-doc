@@ -2,14 +2,10 @@ import React from 'react';
 import TodoItem from './TodoItem';
 import './TodoList.css';
 
-const TodoList = ({ data }) => {
+const TodoList = () => {
   return (
     <ul className="TodoList">
-      {data.map((item) => (
-        <TodoItem key={item.id}>
-          {item.id} / {item.text}
-        </TodoItem>
-      ))}
+      <TodoItem />
     </ul>
   );
 };

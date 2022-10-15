@@ -1,10 +1,10 @@
 import React from 'react';
 
-const TodoItem = ({ item }) => {
+const TodoItem = () => {
   return (
     <li>
       <span>✓</span>
-      <em>{TodoItem.text}</em>
+      <em>텍스트</em>
       <button>삭제</button>
     </li>
   );

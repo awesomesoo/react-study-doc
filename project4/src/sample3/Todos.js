@@ -11,15 +11,21 @@ const dataList = [
 
 const Todos = () => {
   const [data, setData] = useState(dataList);
+
+  // 삭제
+  const onDel = (id) => {
+    setData(data.filter((item) => item.id !== id));
+  };
+
   return (
     <div className="Todos">
       <h1>할 일 기록하기</h1>
       <TodoFrom />
-      <TodoList data={data} />
+      <TodoList data={data} onDel={onDel} />
     </div>
   );
 };
 
 export default Todos;
-
+// 완성 화면
 // http://bse0.dothome.co.kr/week/4day-1/
