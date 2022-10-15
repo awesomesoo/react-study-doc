@@ -26,7 +26,10 @@ const Todos = () => {
   // 수정
   const onMod = (id) => {
     setData(
-      data.map((item) => (item.id === id ? { ...item, isChk: true } : item))
+      data.map((item) =>
+        item.id === id ? { ...item, isChk: !item.isChk } : item
+      )
+      // ★ 주의 : !isChk 만 쓰면 안되고 해당하는 것에 대한 key를 가져와야 하기 떄문에 !item.isChk 라고 써야한다.
     );
   };
 
