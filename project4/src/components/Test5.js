@@ -12,14 +12,25 @@ const dataList = [
 const Test5 = () => {
   const [data, setData] = useState(dataList);
 
-  const onDel = () => {
-    alert('삭제');
+  const onDel = (id) => {
+    // alert('id');
+    setData(data.filter((item) => item.id !== id));
   };
-  const onAdd = () => {
-    alert('추가');
+  const onAdd = (text) => {
+    // alert('text');
+    setData([...data, { id: data.length + 1, text: '육' }]);
+    /* 
+      주의 :
+      data.length 로 하면 키가 중복이 된다. 이렇게 쓰면 안됨<div className=""></div>
+    */
   };
-  const onMod = () => {
-    alert('수정');
+  const onMod = (id) => {
+    // alert('id');
+    setData(
+      data.map((item) =>
+        item.id === id ? { ...item, text: 'text변경' } : item
+      )
+    );
   };
 
   return (
