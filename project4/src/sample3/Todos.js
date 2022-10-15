@@ -24,8 +24,8 @@ const Todos = () => {
   };
 
   // 수정
-  const onMod = () => {
-    
+  const onMod = (id) => {
+    setData(data.map((item) => (item.id === id ? {} : item)));
   };
 
   return (
