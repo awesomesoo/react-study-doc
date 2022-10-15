@@ -23,23 +23,66 @@ const Test4 = () => {
     setData(data.filter((item) => item.id !== idDDD));
   };
 
+  const onAdd12 = () => {
+    setData([{ id: data.length + 1, text: '유재석' }]); // 유재석만이라는 객체만 추가된다.
+  };
+  const onAdd1 = () => {
+    setData([...data, { id: data.length + 1, text: '유재석' }]);
+    // 스프레드연산자를 사용해서 기존에 있는 내용에 추가하는 법.  유재석만 추가된다.
+  };
+  const onAdd2 = () => {
+    setData([
+      ...data,
+      {
+        id: data.length + 1,
+        text: '강호동',
+      },
+    ]);
+  };
+  // key와 매개변수의 값이 동일하면 생략가능하다
+  const onAdd = (text) => {
+    // setData([...data, { id: data.length + 1, text: name }]);
+    setData([...data, { id: data.length + 1, text }]);
+  };
+
   return (
     <div style={{ marign: 30 }}>
-      <h2>추가, 삭제, 수정</h2>
+      <h2>삭제, 추가, 수정</h2>
+      <h3>삭제</h3>
       <p>
-        <button>추가</button>
-        <button>추가</button>
-        <button>추가</button>
-      </p>
-      <p>
-        {/* 1번째 삭제한 나머지 출력 */}
-        <button onClick={onDel1}>'하나' 삭제</button>
+        <button onClick={onDel1}>'하나' 삭제한 나머지 출력 </button>
         <br />
         <button onClick={onDel2}>id:3 삭제</button>
         <br />
         <button onClick={() => onDel(1)}>1 삭제</button>
+        <br />
         <button onClick={() => onDel(4)}>4 삭제</button>
       </p>
+      <h3>추가</h3>
+      <p>
+        <button onClick={onAdd12}>유재석만 추가</button>
+        <br />
+        <button onClick={onAdd1}>기존내용+유재석 추가</button>
+        <br />
+        <button onClick={onAdd2}>강호동 추가</button>
+        <br />
+        <button
+          onClick={() => {
+            onAdd('김혜수');
+          }}
+        >
+          기존내용+김혜수 추가
+        </button>
+        <br />
+        <button
+          onClick={() => {
+            onAdd('한지민');
+          }}
+        >
+          기존내용+한지민 추가
+        </button>
+      </p>
+      <h3>수정</h3>
       <p>
         <button>수정</button>
         <button>수정</button>
