@@ -1,11 +1,11 @@
 import './App.css';
-import Gallery from './sample1Gallery/Gallery';
 import './assets/api/css/reset.css';
+import Friend from './sample2Friend/Friend';
 
 function App() {
   return (
     <>
-      <Gallery />
+      <Friend />
     </>
   );
 }
