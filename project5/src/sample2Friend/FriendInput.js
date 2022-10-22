@@ -8,6 +8,8 @@ const FriendInput = ({ onAdd }) => {
     image: '',
   });
 
+  const nameRef = useRef(null);
+
   // 구조분해 할당
   const { name, age, image } = obj;
 
@@ -21,15 +23,25 @@ const FriendInput = ({ onAdd }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    if (!name || !age || !image) return;
+
     // onAdd(name, age, image); // 아래와 같다
     onAdd(obj);
+    nameRef.current.focus();
   };
 
   return (
     <form className="formadd" onSubmit={onSubmit}>
       <p>
         <label>이름</label>
-        <input type="text" name="name" value={name} onChange={changeInput} />
+        <input
+          type="text"
+          name="name"
+          value={name}
+          onChange={changeInput}
+          ref={nameRef}
+        />
       </p>
       <p>
         <label>나이</label>
