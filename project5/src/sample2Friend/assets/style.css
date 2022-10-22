@@ -33,7 +33,9 @@
   padding-top: 20px;
 }
 .wrap ul li button {
-  background: rgb(150, 78, 78);
+  background: rgb(116, 43, 43);
+  color: white;
+  border-radius: 10px;
 }
 .wrap ul li div strong {
   display: block;

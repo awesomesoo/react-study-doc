@@ -16,8 +16,7 @@ const FriendInput = () => {
         <input type="text" />
       </p>
       <p>
-        <label htmlFor="">추가</label>
-        <input type="text" />
+        <button>추가</button>
       </p>
     </form>
   );
