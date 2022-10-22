@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FriendItem = ({ item }) => {
+const FriendItem = ({ item, onDel }) => {
   const { id, age, image, name } = item;
   return (
     <li>
@@ -11,7 +11,7 @@ const FriendItem = ({ item }) => {
         <strong>이름 : {name}</strong>
         <span>나이 : {age}</span>
       </div>
-      <button>삭제</button>
+      <button onClick={() => onDel(id)}>삭제</button>
     </li>
   );
 };

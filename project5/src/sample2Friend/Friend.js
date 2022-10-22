@@ -6,7 +6,11 @@ import './assets/style.css';
 
 const Friend = () => {
   const [data, setData] = useState(dataList);
-  const onDel = () => {};
+  // 삭제
+  const onDel = (id) => {
+    setData(data.filter((item) => item.id !== id));
+  };
+
   return (
     <div className="wrap">
       <h1>친구들 총 인원</h1>
