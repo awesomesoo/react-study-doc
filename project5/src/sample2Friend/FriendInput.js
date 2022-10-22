@@ -1,22 +1,46 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
-const FriendInput = () => {
+const FriendInput = ({ onAdd }) => {
+  //
+  const [obj, setObj] = useState({
+    name: '',
+    age: '',
+    image: '',
+  });
+
+  // 구조분해 할당
+  const { name, age, image } = obj;
+
+  const changeInput = (e) => {
+    const { value, name } = e.target;
+    setObj({
+      ...obj,
+      [name]: value,
+    });
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    // onAdd(name, age, image); // 아래와 같다
+    onAdd(obj);
+  };
+
   return (
-    <form className="formadd">
+    <form className="formadd" onSubmit={onSubmit}>
       <p>
-        <label htmlFor="">이름</label>
-        <input type="text" />
+        <label>이름</label>
+        <input type="text" name="name" value={name} onChange={changeInput} />
       </p>
       <p>
-        <label htmlFor="">나이</label>
-        <input type="text" />
+        <label>나이</label>
+        <input type="text" name="age" value={age} onChange={changeInput} />
       </p>
       <p>
-        <label htmlFor="">사진</label>
-        <input type="text" />
+        <label>사진</label>
+        <input type="text" name="image" value={image} onChange={changeInput} />
       </p>
       <p>
-        <button>추가</button>
+        <button type="submit">추가</button>
       </p>
     </form>
   );

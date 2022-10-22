@@ -33,9 +33,10 @@
   padding-top: 20px;
 }
 .wrap ul li button {
-  background: rgb(116, 43, 43);
-  color: white;
+  background: rgb(255, 200, 200);
   border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }
 .wrap ul li div strong {
   display: block;
@@ -55,6 +56,7 @@
   background: #b2ebf2;
   outline: none;
   margin-right: 10px;
+  cursor: pointer;
 }
 .wrap .btn button:last-child {
   margin-right: 0;
