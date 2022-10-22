@@ -1,12 +1,12 @@
 import './App.css';
 import './assets/api/css/reset.css';
 // import Friend from './sample2Friend/Friend';
-import Test2useEffect from './test/Test2useEffect';
+import Test3useEffect from './test/Test3useEffect';
 
 function App() {
   return (
     <>
-      <Test2useEffect />
+      <Test3useEffect />
     </>
   );
 }
