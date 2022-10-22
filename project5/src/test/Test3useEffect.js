@@ -7,7 +7,12 @@ const Test3useEffect = () => {
   const onUp1 = (e) => {
     setCount1(count1 + 1);
   };
-  const onUp2 = (e) => {};
+  const onUp2 = (e) => {
+    // setCount2(이전값 => 이전값 + 1);
+    // setCount2(매개변수 => 매개변수 + 1);
+    // setCount2(count2 => count2 + 1);
+    setCount2((XXX) => XXX + 1);
+  };
 
   return (
     <div>
