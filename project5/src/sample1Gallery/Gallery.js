@@ -16,11 +16,13 @@ const dataList = [
 const Gallery = () => {
   const [data, setData] = useState(dataList);
   const [cat, setCat] = useState(data[0]); // dataList[0] 으로 써도 됨.
-  const onShow = () => {};
+  const onShow = () => {
+    alert('테스트');
+  };
   return (
     <div className="Gallery">
       <GalleryBig cat={cat} />
-      <GalleryList data={data} />
+      <GalleryList data={data} onShow={onShow} />
     </div>
   );
 };

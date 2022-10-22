@@ -1,9 +1,9 @@
 import React from 'react';
 
-const GalleryItem = ({ item }) => {
+const GalleryItem = ({ item, onShow }) => {
   const { id, imgurl, title } = item;
   return (
-    <li>
+    <li onClick={onShow}>
       <img src={imgurl} alt={title} />
     </li>
   );
