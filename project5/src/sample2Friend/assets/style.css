@@ -32,6 +32,9 @@
   margin-left: 40px;
   padding-top: 20px;
 }
+.wrap ul li button {
+  background: rgb(150, 78, 78);
+}
 .wrap ul li div strong {
   display: block;
   font-size: 16px;
