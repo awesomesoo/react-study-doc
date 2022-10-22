@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FriendList = () => {
-  return <div></div>;
+  return <div>FriendList</div>;
 };
 
 export default FriendList;

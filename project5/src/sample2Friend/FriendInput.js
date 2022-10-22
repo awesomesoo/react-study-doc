@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FriendInput = () => {
-  return <div></div>;
+  return <div>FriendInput</div>;
 };
 
 export default FriendInput;
