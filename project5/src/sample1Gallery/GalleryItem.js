@@ -1,9 +1,10 @@
 import React from 'react';
 
 const GalleryItem = ({ item, onShow }) => {
-  const { id, imgurl, title } = item;
+  const { id, imgurl, title, isClass } = item;
   return (
-    <li onClick={onShow}>
+    // <li onClick={() => onShow(id)} className={isClass == true ? 'on' : ''}>
+    <li onClick={() => onShow(id)} className={isClass ? 'on' : ''}>
       <img src={imgurl} alt={title} />
     </li>
   );
