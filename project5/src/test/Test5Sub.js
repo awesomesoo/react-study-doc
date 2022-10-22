@@ -11,7 +11,15 @@ const Test5Sub = () => {
   };
 
   useEffect(() => {
+    // onMove 가 계속 사용(누적)되어 있다.
     window.addEventListener('mousemove', onMove);
+    console.log('useEffect');
+
+    // 뒷정리 : onMove를 사용하지 않게하기.
+    return () => {
+      window.removeEventListener('mousemove', onMove);
+      console.log('뒷정리');
+    };
   });
   return (
     <div>
