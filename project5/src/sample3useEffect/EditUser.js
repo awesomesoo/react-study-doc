@@ -5,18 +5,18 @@ const EditUser = ({ current, onUpdate }) => {
   const textRef = useRef(null);
   const { text, addr } = user;
 
-  const changeInput = (e) => {
+  const changeInput = e => {
     const { value, name } = e.target;
     setUser({ ...user, [name]: value });
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
     if (!text || !addr) return;
     onUpdate();
     setUser({ text: '', addr: '' });
   };
-  
+
   return (
     <form onSubmit={onSubmit}>
       <h2>작은아씨들 출연진 수정</h2>
