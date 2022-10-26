@@ -21,25 +21,25 @@ const Customer = () => {
   const no = useRef(data.length + 1);
 
   // 삭제
-  const onDel = (id) => {
-    setData(data.filter((item) => item.id !== id));
+  const onDel = id => {
+    setData(data.filter(item => item.id !== id));
   };
 
   // 추가
-  const onAdd = (user) => {
+  const onAdd = user => {
     user.id = no.current++;
     setData([...data, user]);
   };
 
   // 수정
-  const onEdit = (obj) => {
+  const onEdit = obj => {
     // setIsEdit(false); // 추가 화면 나옴
     setIsEdit(true); // 수정 화면 나옴
     setCurrent(obj);
   };
 
-  const onUpdate = (obj) => {
-    setData(data.map((item) => (item.id === obj.id ? {} : item)));
+  const onUpdate = obj => {
+    setData(data.map(item => (item.id === obj.id ? {} : item)));
     setIsEdit(false);
   };
 
