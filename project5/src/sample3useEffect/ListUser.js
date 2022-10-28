@@ -4,7 +4,7 @@ import ItemUser from './ItemUser';
 const ListUser = ({ data, onDel, onEdit }) => {
   return (
     <div>
-      <h2 className="users">작은아씨들 출연진</h2>;
+      <h2 className="users">작은아씨들 출연진</h2>
       <table>
         {/* <caption style={{ display: none; }}>작은아씨들</caption> */}
         <colgroup>
@@ -20,7 +20,7 @@ const ListUser = ({ data, onDel, onEdit }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((item) => (
+          {data.map(item => (
             <ItemUser key={item.id} item={item} onDel={onDel} onEdit={onEdit} />
           ))}
         </tbody>
