@@ -38,9 +38,10 @@ GalleryItem : 이미지 리스트 아이템
 useState 사용하여 api 가져오기.
 GalleryList 에 data 보내주기.
 GalleryList 에서 data 파라미터로 가져오기.
-ul안에 li를 .map()으로 불러오기.
+ul안에 li를 .map( item => () key={} )으로 불러오기.
 
-
+GalleryItem 내용 넣기
+item 가져오기.
 
 
 
