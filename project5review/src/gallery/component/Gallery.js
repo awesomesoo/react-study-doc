@@ -15,7 +15,7 @@ const Gallery = () => {
   const [cat, setCat] = useState(data[0]);
 
   const onShow = (id) => {
-    setCat(data.find((item) => (item.id = id)));
+    setCat(data.find((item) => item.id === id));
     setData(
       data.map((item) =>
         item.id === id
