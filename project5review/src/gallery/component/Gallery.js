@@ -14,7 +14,16 @@ const Gallery = () => {
   const [data, setData] = useState(dataList);
   const [cat, setCat] = useState(data[0]);
 
-  const onShow = (id) => {};
+  const onShow = (id) => {
+    setCat(data.find((item) => (item.id = id)));
+    setData(
+      data.map((item) =>
+        item.id === id
+          ? { ...item, isClass: true }
+          : { ...item, isClass: false },
+      ),
+    );
+  };
 
   return (
     <div>
@@ -42,19 +51,9 @@ ul안에 li를 .map( item => () key={} )으로 불러오기.
 
 GalleryItem 내용 넣기
 item 가져오기.
+GalleryItem을 클릭 했을 때 클릭한 데이터의 isClass가 true 이면 on 아니면 클래스 없음<div className=""></div>
 
-
-
-const [cat, setCat] = useState(data[0]);
-
-
-
-
-
-
-
-
-
-
-
+Gallery 에 onShow 함수 작성.
+GalleryList 에 onShow 가져오기
+GalleryList 에서 onShow 불러오기
 */
