@@ -1,10 +1,12 @@
 import './css/reset.css';
-import Gallery from './gallery/component/Gallery';
+import Gallery from './component/gallery//Gallery';
+import Friend from './component/friend/Friend';
 
 function App() {
   return (
     <>
       <Gallery />
+      <Friend />
     </>
   );
 }
