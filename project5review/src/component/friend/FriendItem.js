@@ -37,8 +37,8 @@ const StyledItem = styled.li`
   }
 `;
 
-const FriendItem = ({ item }) => {
-  const { image, name, age } = item;
+const FriendItem = ({ item, onDel }) => {
+  const { id, image, name, age } = item;
   return (
     <StyledItem>
       <p>
@@ -48,7 +48,7 @@ const FriendItem = ({ item }) => {
         <strong>이름 : {name}</strong>
         <span>나이 : {age}</span>
       </div>
-      <button>삭제</button>
+      <button onClick={() => onDel(id)}>삭제</button>
     </StyledItem>
   );
 };

@@ -53,6 +53,11 @@ const Friend = () => {
     setIsChk(checked);
   };
 
+  // 삭제
+  const onDel = (id) => {
+    setData(data.filter((item) => item.id !== id));
+  };
+
   return (
     <StyledFriend>
       <h1>친구들 총인원 : {data.length}</h1>
@@ -60,7 +65,7 @@ const Friend = () => {
         <input type='checkbox' checked={isChk} onChange={changeInput} />
         {isChk === true ? '보이기' : '숨기기'}
       </label>
-      <FriendList data={data} />
+      <FriendList data={data} onDel={onDel} />
       <p className='btn'>
         <button>모두삭제</button>
         <button>초기복구</button>
@@ -78,5 +83,9 @@ export default Friend;
 
 FriendList 에 data 전달.
 FriendList 에서 data 를 {data.map(item => <FriendItem key={item.id} />)} 으로 보여주기
+
+삭제 기능 만들기
+onDel 함수 정의
+Array.prototype.filter() 를 사용해서 만든다
 
 */
