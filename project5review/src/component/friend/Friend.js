@@ -47,11 +47,17 @@ const Friend = () => {
   const [data, setData] = useState(dataList);
   const [isChk, setIsChk] = useState(false);
 
+  // 체크박스 클릭시 보이기 / 숨기기 토글
+  const changeInput = (e) => {
+    const { checked } = e.target;
+    setIsChk(checked);
+  };
+
   return (
     <StyledFriend>
       <h1>친구들 총인원 : {data.length}</h1>
       <p className='chk'>
-        <input type='checkbox' checked={isChk} />
+        <input type='checkbox' checked={isChk} onChange={changeInput} />
         보이기/숨기기
       </p>
       <FriendList />
