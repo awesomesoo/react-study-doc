@@ -22,7 +22,7 @@ const StyledFriend = styled.div`
     display: block;
     background: #333;
     color: #fff;
-    width: 100px;
+    width: 120px;
     text-align: center;
     padding: 10px 0;
     font-size: 12px;
@@ -56,11 +56,11 @@ const Friend = () => {
   return (
     <StyledFriend>
       <h1>친구들 총인원 : {data.length}</h1>
-      <p className='chk'>
+      <label className='chk'>
         <input type='checkbox' checked={isChk} onChange={changeInput} />
-        보이기/숨기기
-      </p>
-      <FriendList />
+        {isChk === true ? '보이기' : '숨기기'}
+      </label>
+      <FriendList data={data} />
       <p className='btn'>
         <button>모두삭제</button>
         <button>초기복구</button>
@@ -74,6 +74,9 @@ export default Friend;
 컴포넌트를 다 만든다.
 
 사용할 데이터를 불어와준다. 데이터의 총 갯수를 불러온다.
+보이기/숨기기 체크 상태를 설정해주고 상태 관리를 한다.
 
+FriendList 에 data 전달.
+FriendList 에서 data 를 {data.map(item => <FriendItem key={item.id} />)} 으로 보여주기
 
 */

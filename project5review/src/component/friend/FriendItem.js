@@ -37,15 +37,16 @@ const StyledItem = styled.li`
   }
 `;
 
-const FriendItem = () => {
+const FriendItem = ({ item }) => {
+  const { image, name, age } = item;
   return (
     <StyledItem>
       <p>
-        <img src='' alt='' />
+        <img src={image} alt={name} />
       </p>
       <div>
-        <strong>이름 : </strong>
-        <span>나이 : </span>
+        <strong>이름 : {name}</strong>
+        <span>나이 : {age}</span>
       </div>
       <button>삭제</button>
     </StyledItem>

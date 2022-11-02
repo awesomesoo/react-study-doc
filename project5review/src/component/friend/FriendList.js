@@ -1,10 +1,12 @@
 import React from 'react';
 import FriendItem from './FriendItem';
 
-const FriendList = () => {
+const FriendList = ({ data }) => {
   return (
     <ul>
-      <FriendItem />
+      {data.map((item) => (
+        <FriendItem key={item.id} item={item} />
+      ))}
     </ul>
   );
 };
