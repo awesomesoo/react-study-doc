@@ -1,11 +1,10 @@
 import React from 'react';
+import FriendItem from './FriendItem';
 
 const FriendList = () => {
   return (
     <ul>
-      {data.map((item) => (
-        <FriendItem/>
-      ))}
+      <FriendItem />
     </ul>
   );
 };

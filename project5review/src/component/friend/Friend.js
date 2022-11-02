@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FriendList from './FriendList';
 import styled from 'styled-components';
+import dataList from '../../api/friendData';
 
 const StyledFriend = styled.div`
-  .wrap {
-    width: 400px;
-    margin: 20px auto;
-    border: 1px solid #999;
-    padding: 25px;
-    position: relative;
-  }
+  width: 400px;
+  margin: 20px auto;
+  border: 1px solid #999;
+  padding: 25px;
+  position: relative;
+
   h1 {
     font-size: 25px;
     margin-bottom: 15px;
@@ -44,9 +44,11 @@ const StyledFriend = styled.div`
 `;
 
 const Friend = () => {
+  const [data, setData] = useState(dataList);
+
   return (
     <StyledFriend>
-      <h1>친구들 총인원 : </h1>
+      <h1>친구들 총인원 : {data.length}</h1>
       <p className='chk'>
         <input type='checkbox' checked />
         보이기/숨기기
