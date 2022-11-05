@@ -20,7 +20,7 @@ const TodoForm = ({ onAdd }) => {
   };
 
   return (
-    <form className="TodoForm" onSubmit={onSubmit}>
+    <form className={styles.TodoForm} onSubmit={onSubmit}>
       <input
         type="text"
         value={text}
