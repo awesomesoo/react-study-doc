@@ -1,7 +1,7 @@
 // import Test from './test/Test8LocalStorage';
 // import Customer from './sample3useEffectLocalStorage/Customer';
 // import Styling1 from './componentStyle/Test1Bootstrap';
-import Styling from './componentStyle/Test9StyledComponent';
+import Styling from './componentStyle/Test10StyledComponent';
 
 //
 function App() {
