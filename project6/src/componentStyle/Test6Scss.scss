@@ -1,0 +1,53 @@
+// 변수
+$red: red;
+$pink: pink;
+$green: green;
+$skyblue: skyblue;
+
+@mixin make($size) {
+  $width: 90px;
+
+  @if $size % 2 == 0 {
+    $width: $width + 50;
+  } @else if $size % 3 ==0 {
+    $width: $width -50;
+  } @else {
+    $width: $width;
+  }
+
+  width: $width;
+  height: 50px * 2;
+  line-height: 5 * 2;
+  font-size: 20px;
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.2) rotate(45deg);
+  }
+}
+
+.wrap {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  .box {
+    border: 1px solid #000;
+    text-align: center;
+    // &: 선택자 , &. 클래스
+    &.red {
+      background: red;
+      @include make(1);
+    }
+    &.pink {
+      background: pink;
+      @include make(2);
+    }
+    &.green {
+      background: green;
+      @include make(3);
+    }
+    &.skyblue {
+      background: skyblue;
+      @include make(4);
+    }
+  }
+}
