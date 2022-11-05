@@ -6,7 +6,13 @@ const TodoList = ({ data, onDel, onToggle }) => {
   return (
     <ul className={styles.TodoList}>
       {data.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} onDel={onDel} onToggle={onToggle} />
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          onDel={onDel}
+          onToggle={onToggle}
+          styles={styles}
+        />
       ))}
     </ul>
   );
