@@ -1,9 +1,9 @@
-import Test7 from './test/Test7';
+import Test from './test/Test8';
 
 function App() {
   return (
     <>
-      <Test7 />
+      <Test />
     </>
   );
 }
