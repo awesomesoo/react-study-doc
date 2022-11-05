@@ -1,8 +1,7 @@
 // import Test from './test/Test8LocalStorage';
 // import Customer from './sample3useEffectLocalStorage/Customer';
 // import Styling1 from './componentStyle/Test1Bootstrap';
-import Styling from './componentStyle/Test6Scss';
-import Test7StyledComponent from './componentStyle/Test7StyledComponent';
+import Styling from './componentStyle/Test9StyledComponent';
 
 //
 function App() {
@@ -11,7 +10,6 @@ function App() {
       {/* <Test /> */}
       {/* <Customer /> */}
       <Styling />
-      <Test7StyledComponent />
     </>
   );
 }
