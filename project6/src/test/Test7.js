@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Test7Sub from './Test7Sub';
 
 const Test7 = () => {
+  // 1.
   const [msg, setMsg] = useState('아무거나');
   const [isShow, setIsShow] = useState(false);
 

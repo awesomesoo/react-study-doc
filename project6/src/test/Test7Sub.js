@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 const StyledH2 = styled.h2`
@@ -9,6 +10,16 @@ const StyledH2 = styled.h2`
 `;
 
 const Test7Sub = ({ msg, isShow, setIsShow }) => {
+  // 2.
+  useEffect(() => {
+    const timerID = setTimeout(() => {
+      setIsShow(false);
+    }, 200);
+    return () => {
+      clearTimeout(timerID);
+    };
+  });
+
   return (
     <>
       <p>테스트 입니다.</p>

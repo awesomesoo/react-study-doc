@@ -3,6 +3,7 @@ import ListUser from './ListUser';
 import AddUser from './AddUser';
 import EditUser from './EditUser';
 import './style.css';
+import Message from './Message';
 
 const dataList = [
   { id: 1, text: '김고은', addr: '서울' },
@@ -18,11 +19,17 @@ const Customer = () => {
   const [isEdit, setIsEdit] = useState(false);
   const [current, setCurrent] = useState({});
 
+  const [msg, setMsg] = useState('test');
+  const [isShow, setIsShow] = useState(false);
+
   const no = useRef(data.length + 1);
 
-  // 삭제
+  //삭제
   const onDel = (id) => {
     setData(data.filter((item) => item.id !== id));
+    // 삭제하면 메시지 나왔다가 사라짐.
+    setMsg('명단을 삭제 했습니다.');
+    setIsShow(true);
   };
 
   // 추가
@@ -38,13 +45,15 @@ const Customer = () => {
     setCurrent(obj);
   };
 
+  // 수정
   const onUpdate = (obj) => {
-    setData(data.map((item) => (item.id === obj.id ? {} : item)));
+    setData(data.map((item) => (item.id === obj.id ? obj : item)));
     setIsEdit(false);
   };
 
   return (
     <div className="Customer">
+      <Message msg={msg} isShow={isShow} setIsShow={setIsShow} />
       {isEdit ? (
         <EditUser current={current} onUpdate={onUpdate} setIsEdit={setIsEdit} />
       ) : (
@@ -122,6 +131,24 @@ setIsEdit 전달
 
 
 
+메시지 기능 만들기.
 
+ const [msg, setMsg] = useState('test');
+  const [isShow, setIsShow] = useState(false);
+
+Message.js 컴포넌트 만들기 
+
+   useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsShow(false);
+    }, 300);
+    return () => {
+      clearTimeout(timer);
+    };
+  });
+
+  // 삭제하면 메시지 나왔다가 사라짐.
+    setMsg('명단을 삭제 했습니다.');
+    setIsShow(true);
 
 */

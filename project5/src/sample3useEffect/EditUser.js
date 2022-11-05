@@ -18,7 +18,10 @@ const EditUser = ({ current, onUpdate, setIsEdit }) => {
     e.preventDefault();
     if (!text || !addr) return;
     onUpdate(user);
-    setUser({ text: '', addr: '' });
+    setUser({
+      text: '',
+      addr: '',
+    });
   };
 
   return (
@@ -40,9 +43,7 @@ const EditUser = ({ current, onUpdate, setIsEdit }) => {
       </p>
       <p>
         <button type="submit">수정</button>
-        <button type="submit" onClick={() => setIsEdit(false)}>
-          취소
-        </button>
+        <button onClick={() => setIsEdit(false)}>취소</button>
       </p>
     </form>
   );
