@@ -1,0 +1,21 @@
+.wrap {
+  width: 500px;
+  margin: 20px auto;
+  border: 1px solid #000;
+  padding: 15px;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background: pink;
+  margin: 15px;
+}
+.size {
+  width: 150px;
+  height: 80px;
+  margin: 20px;
+}
+.bg {
+  background: hotpink;
+}

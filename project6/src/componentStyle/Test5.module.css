@@ -1,0 +1,29 @@
+.wrap {
+  width: 500px;
+  margin: 20px auto;
+  border: 1px solid #000;
+  padding: 15px;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background: lime;
+  margin: 15px;
+}
+.size {
+  width: 150px;
+  height: 80px;
+  margin: 20px;
+}
+.bg {
+  background: skyblue;
+}
+/* 
+  모듈에서 일반 스타일처럼 사용 가능  -> 일반 css 처럼 사용가능하다. 많이 사용되지는 않는다.
+*/
+:global .test {
+  width: 500px;
+  height: 50px;
+  background: red;
+}
