@@ -2,7 +2,21 @@ import React from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
 
+const StyledMenu = styled.div`
+  z-index: 10;
+  .dim {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 1s;
+  }
+`;
+
 const StyledMenuButton = styled.div`
+  z-index: 11;
   position: relative;
   width: 50px;
   height: 44px;
@@ -11,6 +25,7 @@ const StyledMenuButton = styled.div`
   display: inline-block;
   transition: all 0.4s;
   box-sizing: border-box;
+  background-color: #fff;
   span {
     display: inline-block;
     transition: all 0.4s;
@@ -53,10 +68,10 @@ const StyledMenuButton = styled.div`
   }
 `;
 
-const StyledMenu = styled.div`
+const StyledMenuList = styled.div`
   position: fixed;
   left: -40%;
-  z-index: 10;
+
   width: 40%;
   height: 100%;
   background-color: pink;
@@ -78,22 +93,22 @@ const SimpleApp = () => {
     setMenu(!menu);
   };
   return (
-    <>
+    <StyledMenu>
       {/* <button onClick={toggleMenu}>메뉴 {menu ? '접기' : '펼치기'}</button> */}
       <StyledMenuButton onClick={toggleMenu} className={menu ? 'active' : ''}>
         <span></span>
         <span></span>
         <span></span>
       </StyledMenuButton>
-      <StyledMenu className={menu ? 'on' : ''}>
+      <StyledMenuList className={menu ? 'on' : ''}>
         <ul>
           <li>메뉴입니다</li>
           <li>메뉴입니다</li>
           <li>메뉴입니다</li>
         </ul>
-      </StyledMenu>
-      <div className="content">컨텐츠</div>
-    </>
+      </StyledMenuList>
+      {menu ? <div className="dim"></div> : ''}
+    </StyledMenu>
   );
 };
 

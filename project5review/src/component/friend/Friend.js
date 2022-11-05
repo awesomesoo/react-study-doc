@@ -58,17 +58,21 @@ const Friend = () => {
     setData(data.filter((item) => item.id !== id));
   };
 
+  // 초기복구
+  const onReset = () => {
+    setData(dataList);
+  };
   return (
     <StyledFriend>
       <h1>친구들 총인원 : {data.length}</h1>
-      <label className='chk'>
-        <input type='checkbox' checked={isChk} onChange={changeInput} />
+      <label className="chk">
+        <input type="checkbox" checked={isChk} onChange={changeInput} />
         {isChk === true ? '보이기' : '숨기기'}
       </label>
       <FriendList data={data} onDel={onDel} />
-      <p className='btn'>
+      <p className="btn">
         <button>모두삭제</button>
-        <button>초기복구</button>
+        <button onClick={onReset}>초기복구</button>
       </p>
     </StyledFriend>
   );

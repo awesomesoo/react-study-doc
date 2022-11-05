@@ -1,19 +1,23 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-const EditUser = ({ current, onUpdate }) => {
+const EditUser = ({ current, onUpdate, setIsEdit }) => {
   const [user, setUser] = useState(current);
   const textRef = useRef(null);
   const { text, addr } = user;
 
-  const changeInput = e => {
+  useEffect(() => {
+    setUser(current);
+  }, [current]);
+
+  const changeInput = (e) => {
     const { value, name } = e.target;
     setUser({ ...user, [name]: value });
   };
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
     if (!text || !addr) return;
-    onUpdate();
+    onUpdate(user);
     setUser({ text: '', addr: '' });
   };
 
@@ -36,10 +40,27 @@ const EditUser = ({ current, onUpdate }) => {
       </p>
       <p>
         <button type="submit">수정</button>
-        <button type="submit">취소</button>
+        <button type="submit" onClick={() => setIsEdit(false)}>
+          취소
+        </button>
       </p>
     </form>
   );
 };
 
 export default EditUser;
+
+/* 2022.11.05
+
+useEffect(() => {
+    setUser(current);
+  }, [current]);
+
+setIsEdit 전달
+
+
+
+
+
+
+*/
