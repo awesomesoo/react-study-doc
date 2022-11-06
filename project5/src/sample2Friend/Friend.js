@@ -46,15 +46,15 @@ const Friend = () => {
   };
 
   return (
-    <div className="wrap">
+    <div className='wrap'>
       <h1>친구들 총인원 : {data.length} </h1>
-      <p className="chk">
-        <input type="checkbox" checked={isChk} onChange={changeInput} />
+      <p className='chk'>
+        <input type='checkbox' checked={isChk} onChange={changeInput} />
         보이기/숨기기
       </p>
       <FriendList data={data} onDel={onDel} />
 
-      <p className="btn">
+      <p className='btn'>
         <button onClick={onRemove}>모두삭제</button>
         <button onClick={onReset}>초기복구</button>
       </p>
