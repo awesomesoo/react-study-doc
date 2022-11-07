@@ -33,7 +33,7 @@ const Customer = () => {
   };
 
   // 추가
-  const onAdd = (user) => {
+  const onAdd = (user) => {  
     user.id = no.current++;
     setData([...data, user]);
   };

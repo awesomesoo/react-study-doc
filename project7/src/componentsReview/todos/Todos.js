@@ -1,11 +1,17 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 import styles from './Todos.module.css';
 
 const Todos = () => {
   const no = useRef(1);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(
+    () => JSON.parse(localStorage.getItem('data')) || [],
+  );
+
+  useEffect(() => {
+    localStorage.setItem('data', JSON.stringify(data));
+  }, [data]);
 
   const onDel = (id) => {
     setData(data.filter((todo) => todo.id !== id));
