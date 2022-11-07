@@ -5,7 +5,8 @@ import React from 'react';
 /*
  * 작업물이 많을 때는 아래와 같이 쓰면 단축이 된다.
  */
-import { Friend, Todos } from './components';
+// import { Friend, Todos } from './components';
+import { Friend, Todos } from './componentsReview';
 
 import './assets/css/reset.css';
 
