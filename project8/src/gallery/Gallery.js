@@ -21,7 +21,7 @@ const Gallery = () => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [text, setText] = useState('flowers')
+  const [text, setText] = useState('flower')
 
   useEffect(() => {
     const API_KEY = '31264567-b2f4129d718fb9580a6f88302'
