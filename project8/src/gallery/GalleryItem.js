@@ -43,7 +43,7 @@ const GalleryItem = ({ item }) => {
   return (
     <GalleryItemBox>
       <img src={webformatURL} alt="" />
-      <h3> {user} </h3>
+      <h3>사용자명 : {user} </h3>
       <ul>
         <li>조회수 : {views} </li>
         <li>다운로드 : {downloads} </li>
