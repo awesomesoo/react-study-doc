@@ -1,25 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import styled from 'styled-components'
-
-const GallerySearchBox = styled.form`
-  text-align: center;
-  padding: 30px 0;
-  input {
-    width: 400px;
-    height: 50px;
-    border: 1px solid #999;
-    padding: 15px 0;
-    box-sizing: border-box;
-  }
-  button {
-    width: 150px;
-    height: 50px;
-    background: #000;
-    color: #fff;
-    vertical-align: top;
-  }
-`
+import { GallerySearchBox } from '../styled/galleryStyle'
 
 const GallerySearch = ({ onSearch }) => {
   const [text, setText] = useState('')
