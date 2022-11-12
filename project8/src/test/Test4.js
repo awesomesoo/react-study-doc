@@ -4,7 +4,9 @@ import axios from 'axios';
 const Test4 = () => {
   const [post, setPost] = useState({});
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    axios.get('').then((res) => setPost(res.data));
+  }, []);
   return (
     <div>
       <input type="text" />
