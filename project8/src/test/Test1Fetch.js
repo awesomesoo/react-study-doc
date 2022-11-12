@@ -4,18 +4,18 @@ import axios from 'axios';
 const Test1Fetch = () => {
   const [data, setData] = useState([]);
 
-  /* 1.
-
-fetch('https://jsonplaceholder.typicode.com/posts')
+  /* 
+  // 1-1.
+    fetch('https://jsonplaceholder.typicode.com/posts')
         .then(
             (res) =>
     console.log(res.json() ) 
     
     */
 
-  /* 2.
-  
-  useEffect(() => {
+  /* 
+  // 1-2
+    useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then((res) => res.json())
       .then((res) => setData(res));
@@ -23,8 +23,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   
   */
 
-  /* 3.
-
+  /* 
+  // 3-1.
   useEffect(() => {
    axios.get(url)
    .then( 매개변수 => 매개변수.??)
@@ -32,8 +32,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   
   */
 
-  /* 3-1.
-
+  /* 
+  // 3-2.
   useEffect(() => {
     axios
       .get('https://jsonplaceholder.typicode.com/posts')
@@ -42,8 +42,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 
   */
 
-  /* 3-2.
-
+  /* 
+  // 3-3.
   useEffect(() => {
     axios
       .get('https://jsonplaceholder.typicode.com/posts')
@@ -52,17 +52,46 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 
  */
 
-  /* 3-3.
-
+  /* 3-4.
   useEffect(() => {
     axios
       .get('https://jsonplaceholder.typicode.com/posts')
       .then((res) => setData(res.data)); // 데이터만 가져옴.
   }, []); 
-
   */
 
-  useEffect(() => {}, []);
+  /* 
+  // 4 설명.
+   useEffect(() => {
+    const getData = async () => {};
+    getData();
+  }, []);
+  */
+
+  /* 
+  // 4-1.
+    useEffect(() => {
+        const getData = async () => {
+        const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const data = await res.json();
+        setData(data);
+        };
+        getData();
+    }, []);
+  */
+
+  // 4-2.
+  useEffect(() => {
+    const getData = async () => {
+      const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      setData(res.data);
+    };
+    getData();
+  }, []);
+
+  /* 
+    try catch 도 찾아 공부하기.
+  */
 
   return (
     <div>
