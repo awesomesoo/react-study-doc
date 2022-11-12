@@ -1,11 +1,11 @@
 import './App.css';
 // import Test1Fetch from './test/Test1-1Fetch';
-import Test2 from './test/Test2';
+import Test from './test/Test3';
 
 function App() {
   return (
     <>
-      <Test2 />
+      <Test />
     </>
   );
 }
