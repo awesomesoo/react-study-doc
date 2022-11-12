@@ -15,9 +15,9 @@ const Test4 = () => {
 
   useEffect(() => {
     // const url = 'https://jsonplaceholder.typicode.com/posts/1';
-    const url = `https://jsonplaceholder.typicode.com/posts/1/${id}`;
+    const url = `https://jsonplaceholder.typicode.com/posts/${id}`;
     axios.get(url).then((res) => setPost(res.data));
-  }, [id]);
+  }, [num]);
 
   const onShow = () => {
     setNum(id);
