@@ -93,7 +93,9 @@ const Test1Fetch = () => {
   return (
     <div>
       {data.map((item) => {
-        <p key={item.id}> / {item.title}</p>;
+        <p key={item.id}>
+          {item.id} / {item.title}
+        </p>;
       })}
     </div>
   );
