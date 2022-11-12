@@ -86,3 +86,20 @@ export const GallerySearchBox = styled.form`
     vertical-align: top;
   }
 `
+
+// CSS 쓰는 법
+const post = css`
+  width: 500px;
+  height: 100px;
+  background: pink;
+`
+const cssBox = (num1, num2 = '3') => css`
+  position: absolute;
+  width: ${num1 * 3}px;
+  height: ${num1 * 4}px;
+  border: ${num2}px, solid #000;
+`
+export const Box1 = styled.div`
+  ${post} // 이것 자체는 자바스크립트이다.
+  ${cssBox(20, 5)}
+`
