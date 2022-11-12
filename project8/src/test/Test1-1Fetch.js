@@ -5,12 +5,12 @@ const Test1Fetch = () => {
   const [data, setData] = useState([]);
 
   /* 
-  // 1-1.
+  // 1-1. fetch
+
+    useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(
-            (res) =>
-    console.log(res.json() ) 
-    
+      .then((res) => console.log(res.json())
+    }, []); 
     */
 
   /* 
@@ -20,20 +20,17 @@ const Test1Fetch = () => {
       .then((res) => res.json())
       .then((res) => setData(res));
   }, []); 
-  
   */
 
   /* 
-  // 3-1.
+  // 2-1. axios
   useEffect(() => {
    axios.get(url)
-   .then( 매개변수 => 매개변수.??)
-  }, []); 
-  
+   .then( 매개변수 => 매개변수.??)3  }, []); 
   */
 
   /* 
-  // 3-2.
+  // 2-2.
   useEffect(() => {
     axios
       .get('https://jsonplaceholder.typicode.com/posts')
@@ -43,7 +40,7 @@ const Test1Fetch = () => {
   */
 
   /* 
-  // 3-3.
+  // 2-3.
   useEffect(() => {
     axios
       .get('https://jsonplaceholder.typicode.com/posts')
@@ -52,7 +49,7 @@ const Test1Fetch = () => {
 
  */
 
-  /* 3-4.
+  /* 2-4.
   useEffect(() => {
     axios
       .get('https://jsonplaceholder.typicode.com/posts')
@@ -61,7 +58,7 @@ const Test1Fetch = () => {
   */
 
   /* 
-  // 4 설명.
+  // 3 설명. async await
    useEffect(() => {
     const getData = async () => {};
     getData();
@@ -69,7 +66,7 @@ const Test1Fetch = () => {
   */
 
   /* 
-  // 4-1.
+  // 3-1.
     useEffect(() => {
         const getData = async () => {
         const res = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -80,7 +77,7 @@ const Test1Fetch = () => {
     }, []);
   */
 
-  // 4-2.
+  // 3-2.
   useEffect(() => {
     const getData = async () => {
       const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
