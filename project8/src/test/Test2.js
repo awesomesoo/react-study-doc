@@ -8,16 +8,21 @@ const Test2 = () => {
 
   useEffect(() => {
     axios
-      .get('https://jsonplaceholder.typicode.com/posts') // 주소 잘못 쓰면 에러가 나게 됨.
+      .get('https://jsonplaceholder.typicode.com/posts') // 주소 잘못 쓰면 에러가 나게 됨. -> 로딩중... Request failed with status code 404
+
       .then((res) => {
+        // 정상
         setLoading(false);
         setData(res.data);
         setError(null);
       })
       .catch((error) => {
+        // 에러처리
         setLoading(true);
         setData({});
-        setError('주소 에러');
+        // setError('주소 에러');
+        setError(error.message);
+        // console.log(error.message);
       });
   }, []);
 
