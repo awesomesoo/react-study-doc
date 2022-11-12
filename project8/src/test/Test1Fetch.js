@@ -4,7 +4,21 @@ import { useEffect } from 'react';
 const Test1Fetch = () => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((res) => res.json())
+      .then((res) => setData(res));
+  }, []);
+
+  /* 
+fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(
+            (res) =>
+    console.log(res.json() ) 
+     */
+  // fetch('https://jsonplaceholder.typicode.com/posts')
+  // .then(res => res.json())
+  // .then(res => setData(res))
 
   return (
     <div>
