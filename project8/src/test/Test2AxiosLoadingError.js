@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+/*
+ * ★★★★★ 추천하는 방법!!
+ */
 const Test2 = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);

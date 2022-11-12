@@ -16,9 +16,15 @@ const Test3 = () => {
       } catch (e) {
         setError(e);
       }
+      setLoading(false); // 데이터가 들어오는게 다 끝나면 false로 변경한다.
     };
     getData();
   }, []);
+
+  // 로딩처리, 에러처리, 데이터 null 처리
+  if (loading) return <h2>로딩중...</h2>;
+  if (error) return <h2>에러 메시지</h2>;
+  if (!data) return null;
 
   return (
     <div>
