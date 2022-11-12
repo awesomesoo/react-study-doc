@@ -45,12 +45,16 @@ const Gallery = () => {
       setError('주소가 에러')
     }
     */
-  }, [])
+  }, [text])
+
+  const onSearch = text => {
+    setText(text)
+  }
 
   return (
     <GalleryBox width="1200px">
       <h2>pixabay - api</h2>
-      <GallerySearch />
+      <GallerySearch onSearch={onSearch} />
       <GalleryList data={data} />
     </GalleryBox>
   )
