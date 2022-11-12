@@ -17,9 +17,12 @@ function App() {
       {/* <GlobalStyle />
       <Gallery /> */}
 
+      {/* UseMemo 사용하기 */}
       {/* <UseMemo1 /> */}
       {/* <UseMemo2 /> */}
       <Test8 />
+
+      {/* useCallback 사용하기 */}
     </>
   )
 }
