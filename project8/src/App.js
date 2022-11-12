@@ -1,6 +1,6 @@
 import './App.css';
 // import Test1Fetch from './test/Test1-1Fetch';
-import Test from './test/Test3';
+import Test from './test/Test3TryCatch';
 
 function App() {
   return (
