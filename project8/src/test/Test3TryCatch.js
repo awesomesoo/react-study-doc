@@ -10,12 +10,25 @@ const Test3 = () => {
     const getData = async () => {
       const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
       try {
-      } catch (e) {}
+        setData(res.data);
+        setLoading(true);
+        setError(null);
+      } catch (e) {
+        setError(e);
+      }
     };
     getData();
   }, []);
 
-  return <div>Test3</div>;
+  return (
+    <div>
+      {data.map((item) => (
+        <p key={item.id}>
+          {item.id} / {item.title}
+        </p>
+      ))}
+    </div>
+  );
 };
 
 export default Test3;
