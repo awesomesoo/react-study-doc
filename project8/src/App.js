@@ -1,19 +1,16 @@
-// import Test1Fetch from './test/Test1-1Fetch';
-// import Test from './test/Test3TryCatch';
-import Test4 from './test/Test4';
-// import Test5 from './test/Test5';
-import Gallery from './gallery/Gallery';
+// import Test2AxiosLoadingError from './test/Test2AxiosLoadingError';
 import GlobalStyle from './styled/Global';
+import Gallery from './gallery/Gallery';
 
 function App() {
   return (
     <>
-      <Test4 />
-      {/* <Test5 /> */}
+      {/* 로딩, 에러 처리 */}
+      {/* <Test2AxiosLoadingError /> */}
 
       {/* 갤러리 만들기  */}
-      {/* <GlobalStyle />
-      <Gallery /> */}
+      <GlobalStyle />
+      <Gallery />
     </>
   );
 }

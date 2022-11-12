@@ -3,7 +3,7 @@ import axios from 'axios';
 /*
  * ★★★★★ 추천하는 방법!!
  */
-const Test2 = () => {
+const Test2AxiosLoadingError = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -44,4 +44,4 @@ const Test2 = () => {
   );
 };
 
-export default Test2;
+export default Test2AxiosLoadingError;
