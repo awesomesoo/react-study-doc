@@ -38,3 +38,7 @@ const Test3 = () => {
 };
 
 export default Test3;
+
+/*
+ * try catch는 백엔드단에서 많이 사용한다.
+ */
