@@ -13,7 +13,7 @@ const TodoList = ({ data, onDel, onToggle }) => {
           onToggle={onToggle}
           styles={styles}
         />
-      ))}
+      ))} 
     </ul>
   );
 };
