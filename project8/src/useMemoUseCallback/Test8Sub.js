@@ -33,7 +33,7 @@ const Test8Sub = ({ color, food }) => {
   // const foodInfo = getFood(food)
   const colorInfo = useMemo(() => {
     return getColor(color)
-  }, [color]) // 블록을 쓰면 리턴값도 반환해야한다
+  }, [color]) // ★★★★★ 블록을 쓰면 리턴값도 반환해야한다
   const foodInfo = useMemo(() => {
     return getFood(food)
   }, [food])
