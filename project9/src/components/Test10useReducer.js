@@ -42,7 +42,7 @@ const Test10useReducer = () => {
         <button onClick={() => dispatch({ type: 'DOWN', step: 10 })}>
           감소 : 10
         </button>
-          {/* <button onClick={() => dispatch({ type: 'RESET', step: 120 })}> */}
+        <button onClick={() => dispatch({ type: 'RESET', step: 120 })}>
           초기화
         </button>
       </p>
