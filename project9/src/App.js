@@ -5,9 +5,10 @@ import React from 'react'
 import GlobalStyle from './sample/styled/Global'
 // import { Gallery } from './sample'
 // import Test2 from './components/Test2IndexOfIncludes'
-import Test4 from './components/Test4ReactMemo'
-import Test from './components/Test5'
-import Test6useReducer from './components/Test6useReducer'
+// import Test4 from './components/Test4ReactMemo'
+// import Test from './components/Test5'
+// import Test6useReducer from './components/Test6useReducer'
+import Test7useReducer from './components/Test7useReducer'
 
 const App = () => {
   return (
@@ -18,7 +19,8 @@ const App = () => {
 
       {/* <Test4 />
       <Test /> */}
-      <Test6useReducer />
+      {/* <Test6useReducer /> */}
+      <Test7useReducer />
     </>
   )
 }
