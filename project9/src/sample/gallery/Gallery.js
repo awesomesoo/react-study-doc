@@ -12,7 +12,7 @@ const Gallery = () => {
     const [ text , setText ] = useState('flowers')
 
     useEffect( () => {
-        const API_KEY = '개인키'
+        const API_KEY = '31264567-b2f4129d718fb9580a6f88302'
         const url = `https://pixabay.com/api/?key=${API_KEY}&q=${text}&image_type=photo`
         axios.get( url )
              .then( res  => {
@@ -42,5 +42,7 @@ const Gallery = () => {
 export default Gallery;
 /* 
 react-icons 설치
+
+pixabay 개인키값 넣기
 
 */

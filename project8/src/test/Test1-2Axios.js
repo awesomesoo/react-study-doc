@@ -53,5 +53,6 @@ export default Test1Axios;
 /* 
 비동기 통신의 데이터를 가져와서 보여주기
 
+https://pixabay.com/api/docs/ 에서 개인 키 값 넣기.
 
 */
