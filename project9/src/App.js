@@ -13,7 +13,8 @@ import GlobalStyle from './sample/styled/Global'
 import Test9useReducerCounter from './components/Test9useReducerCounter'
 import Test10useReducer from './components/Test10useReducer'
 import Test11 from './components/Test11' */
-import Test12 from './components/Test12'
+// import Test12 from './components/Test12'
+import Test13 from './components/Test13'
 
 const App = () => {
   return (
@@ -30,7 +31,8 @@ const App = () => {
       <Test9useReducerCounter />
       <Test10useReducer />
       <Test11 /> */}
-      <Test12 />
+      {/* <Test12 /> */}
+      <Test13 />
     </>
   )
 }
