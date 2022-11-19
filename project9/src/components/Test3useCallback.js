@@ -34,16 +34,30 @@ useCallback.....
 
 useCallback 은
 
-★★★★★
-useMemo 보다 React.memo 가 매우 중요하다.
+
+
+==============================================
+
+
+
+useMemo
+React.memo
+
+
+
+★★★★★ useMemo 보다 React.memo 가 매우 중요하다.
+
+
+
 
 useMemo 는
 사용자가 함수를 만들어 잘 사용하려고 하는거고 
+https://ko.reactjs.org/docs/hooks-reference.html#usememo
 
 React.memo 는
 리턴이 필요없는 애들한테는 리턴할 필요가 없다.
 = 변경된 값이 없으면, 리턴하지 않는다
-
+https://ko.reactjs.org/docs/react-api.html#reactmemo
 
 
 */

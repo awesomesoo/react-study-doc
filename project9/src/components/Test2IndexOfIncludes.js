@@ -15,7 +15,7 @@ const dataList = [
   { id: 11, text: '유감가 홍이슬' },
 ]
 
-const Test2 = () => {
+const Test2IndexOfIncludes = () => {
   const [data, setData] = useState(dataList)
   const [text, setText] = useState('')
 
@@ -62,7 +62,7 @@ const Test2 = () => {
   )
 }
 
-export default Test2
+export default Test2IndexOfIncludes
 
 /* 
 
