@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useEffect } from 'react'
 
 const dataList = [
   { id: 1, text: 'naver' },
@@ -21,6 +22,10 @@ const Test2 = () => {
   const changeInput = e => {
     setText(e.target.value)
   }
+
+  useEffect(() => {
+    setData(dataList.filter(item => item.text.indexOf(text) !== -1))
+  }, [text])
 
   return (
     <>
@@ -46,6 +51,14 @@ export default Test2
 
 indexOf
 includes
+
+
+
+useEffect(() => {
+  setData(data.filter(item => item.text.indexOf(text) !== -1))
+}, [text])
+위와 같이 쓰면 데이터를 필터링 하는 것에서 또 찾아주기 때문에 문제가 발생한다
+만약에 예시로, 검색어에 'n'을 입력한 후 다른거를 쓰면 안나올것이다
 
 
 
