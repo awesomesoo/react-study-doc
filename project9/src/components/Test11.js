@@ -11,6 +11,16 @@ export const Test11 = () => {
         <button onClick={() => onUp()}>증가</button>
         <button onClick={() => onDown()}>감소</button>
         <button onClick={() => onReset()}>초기화</button>
+        {/* 
+아래와 같이 써도 되지만, 나중에 값이 추가 될 것 을 고려해 위에처럼 쓴다.
+()=> 를 쓰면 바로 실행이 안되게 된다.
+        onUp = () => {}
+
+
+        <button onClick={onUp}>증가</button>
+        <button onClick={onDown}>감소</button>
+        <button onClick={onReset}>초기화</button>
+        */}
       </p>
     </div>
   )

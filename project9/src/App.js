@@ -9,10 +9,11 @@ import GlobalStyle from './sample/styled/Global'
 // import Test from './components/Test5'
 // import Test6useReducer from './components/Test6useReducer'
 // import Test7useReducer from './components/Test7useReducer'
-import Test8useReducer from './components/Test8useReducer'
+/* import Test8useReducer from './components/Test8useReducer'
 import Test9useReducerCounter from './components/Test9useReducerCounter'
 import Test10useReducer from './components/Test10useReducer'
-import Test11 from './components/Test11'
+import Test11 from './components/Test11' */
+import Test12 from './components/Test12'
 
 const App = () => {
   return (
@@ -25,10 +26,11 @@ const App = () => {
       <Test /> */}
       {/* <Test6useReducer /> */}
       {/* <Test7useReducer /> */}
-      <Test8useReducer />
+      {/* <Test8useReducer />
       <Test9useReducerCounter />
       <Test10useReducer />
-      <Test11 />
+      <Test11 /> */}
+      <Test12 />
     </>
   )
 }
