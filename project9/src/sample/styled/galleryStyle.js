@@ -112,6 +112,8 @@ export const TagListBox = styled.div`
     width: 120px;
     height: 50px;
     background: #000;
+    color: #fff;
+    
   }
   ul {
     display: flex;

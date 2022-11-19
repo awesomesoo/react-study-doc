@@ -7,6 +7,7 @@ import TagList from './TagList'
 
 const Gallery = () => {
   const [data, setData] = useState([])
+  const [tagdata, setTagdata] = useState([]) // 검색어를 관리할 상태
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [text, setText] = useState('flowers')
@@ -30,13 +31,14 @@ const Gallery = () => {
 
   const onSearch = text => {
     setText(text)
+    setTagdata([...tagdata, text])
   }
 
   return (
     <GalleryBox width="1200px">
       <h2>pixabay - api</h2>
       <GallerySearch onSearch={onSearch} />
-      <TagList />
+      <TagList tagdata={tagdata} />
       <GalleryList data={data} />
     </GalleryBox>
   )
@@ -44,10 +46,51 @@ const Gallery = () => {
 
 export default Gallery
 /* 
-react-icons 설치
+API_KEY 에 pixabay 키 값 넣기
 
-pixabay 키 값 넣기
+
+react-icons 설치
+TagList에서 아이콘 불러와서 사용
+
 
 
 Gallery에 TagList 불러오기
+TagListBox 스타일링
+
+
+
+const [tagdata, setTagdata] = useState([]) // 검색어를 관리할 상태
+setTagdata([...tagdata, text])
+<TagList tagdata={tagdata} />
+
+TagList.js 파일에서 
+tagdata를 객체로 가져오고
+검색어를 입력하면 태그가 들어 올 수 있도록 처리
+{tagdata.map((tag, index) => (
+  <li key={index}>
+    {tag}
+    <span>
+      <AiFillCloseCircle />
+    </span>
+  </li>
+))}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 */
