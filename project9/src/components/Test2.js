@@ -18,10 +18,14 @@ const Test2 = () => {
   const [data, setData] = useState(dataList)
   const [text, setText] = useState('')
 
+  const changeInput = e => {
+    setText(e.target.value)
+  }
+
   return (
     <>
       <div>
-        <input type="text" />
+        <input type="text" value={text} onChange={changeInput} />
         <button>검색</button>
       </div>
       <hr />
