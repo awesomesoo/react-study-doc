@@ -1,59 +1,34 @@
 import React, { useReducer } from 'react'
 
 // 초기값
-const initialState = 'hotpink'
+const initialState = { color: 'tomato' } // 이번엔 객체로 초기값 설정함.
 
 // 리듀서 함수
 const reducer = (state, action) => {
-  // const 내맘대로함수이름 = (state, action) => {
+  // 'tomato' 가 state 에 전달
   switch (action.type) {
-    case 'RED':
-      return 'red'
-    case 'GREEN':
-      return 'green'
-    case 'BLUE':
-      return 'blue'
-    case 'PINK':
-      return 'pink'
+    case 'CHANGE_COLOR':
+      // 초기값이 객체이니까 리턴 해줄때도 아래와 같이 객체로 값은 전달해야한다.
+      return {}
     default:
       return state
   }
 }
 
 const Test6useReducer = () => {
-  const [color, dispatch] = useReducer(reducer, initialState)
+  const [state, dispatch] = useReducer(reducer, initialState)
   return (
     <div>
-      <h2 style={{ color: color }}>컬러 : {color}</h2>
+      <h2 style={{ color: state.color }}>컬러 : {state.color}</h2>
       <p>
-        <button
-          onClick={() => {
-            dispatch({ type: 'RED' })
-          }}
-        >
-          red - RED
-        </button>
-        <button
-          onClick={() => {
-            dispatch({ type: 'GREEN' })
-          }}
-        >
-          green - GREEN
-        </button>
-        <button
-          onClick={() => {
-            dispatch({ type: 'BLUE' })
-          }}
-        >
-          blue - BLUE
-        </button>
-        <button
-          onClick={() => {
-            dispatch({ type: 'PINK' })
-          }}
-        >
-          pink - PINK
-        </button>
+        {/* dispatch({ type: CHANGE_COLOR, color: 'red' }) */}
+        {/* dispatch({ type: CHANGE_COLOR, color: 'green' }) */}
+        {/* dispatch({ type: CHANGE_COLOR, color: 'blue' }) */}
+        {/* dispatch({ type: CHANGE_COLOR, color: 'pink' }) */}
+        <button>red - RED</button>
+        <button>green - GREEN</button>
+        <button>green - BLUE</button>
+        <button>green - PINK</button>
       </p>
     </div>
   )
