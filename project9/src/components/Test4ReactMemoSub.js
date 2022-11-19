@@ -1,4 +1,6 @@
-/* import React from 'react'
+/* 
+
+import React from 'react'
 
 const Test4Sub = ({ text, count }) => {
   console.log(text, count)
@@ -10,6 +12,7 @@ const Test4Sub = ({ text, count }) => {
 }
 
 export default React.memo(Test4Sub)
+
  */
 
 /*
