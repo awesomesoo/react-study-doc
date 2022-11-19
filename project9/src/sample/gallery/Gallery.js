@@ -43,6 +43,6 @@ export default Gallery;
 /* 
 react-icons 설치
 
-pixabay 개인키값 넣기
+pixabay 키값 넣기
 
 */
