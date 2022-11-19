@@ -17,7 +17,7 @@ const reducer = (state, action) => {
   }
 }
 
-const Test6useReducer = () => {
+const Test8useReducer = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
   return (
     <div>
@@ -52,7 +52,7 @@ const Test6useReducer = () => {
   )
 }
 
-export default Test6useReducer
+export default Test8useReducer
 /* 
  useReducer
  https://ko.reactjs.org/docs/hooks-reference.html#usereducer

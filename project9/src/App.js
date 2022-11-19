@@ -10,6 +10,7 @@ import GlobalStyle from './sample/styled/Global'
 // import Test6useReducer from './components/Test6useReducer'
 // import Test7useReducer from './components/Test7useReducer'
 import Test8useReducer from './components/Test8useReducer'
+import Test9useReducerCounter from './components/Test9useReducerCounter'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       {/* <Test6useReducer /> */}
       {/* <Test7useReducer /> */}
       <Test8useReducer />
+      <Test9useReducerCounter />
     </>
   )
 }
