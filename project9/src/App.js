@@ -7,6 +7,7 @@ import GlobalStyle from './sample/styled/Global'
 // import Test2 from './components/Test2IndexOfIncludes'
 import Test4 from './components/Test4ReactMemo'
 import Test from './components/Test5'
+import Test6useReducer from './components/Test6useReducer'
 
 const App = () => {
   return (
@@ -15,8 +16,9 @@ const App = () => {
       <GlobalStyle />
       {/* <Gallery /> */}
 
-      <Test4 />
-      <Test />
+      {/* <Test4 />
+      <Test /> */}
+      <Test6useReducer />
     </>
   )
 }
