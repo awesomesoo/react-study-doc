@@ -153,7 +153,16 @@ const onDel = text => {
 
 
 
+src > sample > gallery > index.js 생성 후
+export { default as Gallery } from './Gallery'
+
+src > sample > index.js 생성 후
+export { Gallery } from './gallery'
 
 
+app.js 에서 
+import { Gallery } from './sample'
+<Gallery />
+로 불어오기
 
 */
