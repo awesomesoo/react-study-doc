@@ -3,6 +3,7 @@ import axios from 'axios'
 import GallerySearch from './GallerySearch'
 import GalleryList from './GalleryList'
 import { GalleryBox } from '../styled/galleryStyle'
+import TagList from './TagList'
 
 const Gallery = () => {
   const [data, setData] = useState([])
@@ -35,6 +36,7 @@ const Gallery = () => {
     <GalleryBox width="1200px">
       <h2>pixabay - api</h2>
       <GallerySearch onSearch={onSearch} />
+      <TagList />
       <GalleryList data={data} />
     </GalleryBox>
   )
