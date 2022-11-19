@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Test5Sub from './Test5Sub'
 import Test5Title from './Test5Title'
 /*
- *
+ * 여러 컴포넌트에서 여러 일을 수행하고 있다. 하나가 바뀌면 전부다 리턴을 하기 때문에 변경된 값만 리턴해주기위해서 사용한다.
  */
 const Test5 = () => {
   const [name, setName] = useState('홍길동')
@@ -34,4 +34,4 @@ const Test5 = () => {
   )
 }
 
-export default Test5
+export default React.memo(Test5)
