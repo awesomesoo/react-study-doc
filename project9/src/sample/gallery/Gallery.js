@@ -11,6 +11,7 @@ const Gallery = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [text, setText] = useState('flowers')
+  const [isShow, setIsShow] = useState(false)
 
   useEffect(() => {
     const API_KEY = '31264567-b2f4129d718fb9580a6f88302'
@@ -32,23 +33,35 @@ const Gallery = () => {
   const onSearch = text => {
     setText(text)
     setTagdata([...tagdata, text])
+    setIsShow(true)
   }
 
-  const onDel = () => {
+  const onDel = text => {
     // 삭제
-    setTagdata(tagdata.filter(item => item !== text))
+    // setTagdata(tagdata.filter(item => item !== text))
+    // if (tagdata.length === 0) {
+    if (tagdata.length === 1) {
+      setIsShow(false)
+    } else {
+      setTagdata(tagdata.filter(item => item !== text))
+    }
+    console.log(tagdata.length)
   }
 
   const onAllDel = () => {
     // 모두 삭제
     setTagdata([])
+    setIsShow(false)
   }
 
   return (
     <GalleryBox width="1200px">
       <h2>pixabay - api</h2>
       <GallerySearch onSearch={onSearch} />
-      <TagList tagdata={tagdata} onDel={onDel} onAllDel={onAllDel} />
+      {isShow && (
+        <TagList tagdata={tagdata} onDel={onDel} onAllDel={onAllDel} />
+      )}
+
       <GalleryList data={data} />
     </GalleryBox>
   )
@@ -99,13 +112,44 @@ TagList tagdata={tagdata} onDel={onDel}/>
 </span>
 
 
+
 태그 '모두 삭제' 기능
+const onAllDel = () => {
+  // 모두 삭제
+  setTagdata([])
+}
+onAllDel 객체 전달
 
 
 
+이때 '모두 삭제'라는 버튼은 남아 있어서 이것 또한 삭제 처리.
 
+const [isShow, setIsShow] = useState(false)
+{isShow && (
+  <TagList tagdata={tagdata} onDel={onDel} onAllDel={onAllDel} />
+)}
 
+const onSearch = text => {
+    setText(text)
+    setTagdata([...tagdata, text])
+    setIsShow(true)
+  }
 
+const onAllDel = () => {
+  // 모두 삭제
+  setTagdata([])
+  setIsShow(false)
+}
+
+const onDel = text => {
+  // 삭제
+  if (tagdata.length === 1) {
+    setIsShow(false)
+  } else {
+    setTagdata(tagdata.filter(item => item !== text))
+  }
+  console.log(tagdata.length)
+}
 
 
 
