@@ -3,10 +3,10 @@ import { TagListBox } from '../styled/galleryStyle'
 // https://react-icons.github.io/react-icons/icons?name=ai
 import { AiFillCloseCircle } from 'react-icons/ai'
 
-const TagList = ({ tagdata, onDel }) => {
+const TagList = ({ tagdata, onDel, onAllDel }) => {
   return (
     <TagListBox>
-      <button>모두 삭제</button>
+      <button onClick={onAllDel}>모두 삭제</button>
       <ul>
         {tagdata.map((tag, index) => (
           <li key={index}>

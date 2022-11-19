@@ -48,7 +48,7 @@ const Gallery = () => {
     <GalleryBox width="1200px">
       <h2>pixabay - api</h2>
       <GallerySearch onSearch={onSearch} />
-      <TagList tagdata={tagdata} onDel={onDel} />
+      <TagList tagdata={tagdata} onDel={onDel} onAllDel={onAllDel} />
       <GalleryList data={data} />
     </GalleryBox>
   )
@@ -87,7 +87,7 @@ tagdata를 객체로 가져오고
 
 
 
-태그 각각 삭제 기능
+태그 각각 '삭제' 기능
 const onDel = () => {
   // 삭제
   setTagdata(tagdata.filter(item => item !== text))
@@ -99,7 +99,7 @@ TagList tagdata={tagdata} onDel={onDel}/>
 </span>
 
 
-
+태그 '모두 삭제' 기능
 
 
 
