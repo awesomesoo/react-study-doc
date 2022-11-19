@@ -34,11 +34,21 @@ const Gallery = () => {
     setTagdata([...tagdata, text])
   }
 
+  const onDel = () => {
+    // 삭제
+    setTagdata(tagdata.filter(item => item !== text))
+  }
+
+  const onAllDel = () => {
+    // 모두 삭제
+    setTagdata([])
+  }
+
   return (
     <GalleryBox width="1200px">
       <h2>pixabay - api</h2>
       <GallerySearch onSearch={onSearch} />
-      <TagList tagdata={tagdata} />
+      <TagList tagdata={tagdata} onDel={onDel} />
       <GalleryList data={data} />
     </GalleryBox>
   )
@@ -77,7 +87,16 @@ tagdata를 객체로 가져오고
 
 
 
+태그 각각 삭제 기능
+const onDel = () => {
+  // 삭제
+  setTagdata(tagdata.filter(item => item !== text))
+}
+TagList tagdata={tagdata} onDel={onDel}/>
 
+<span onClick={() => onDel(tag)}>
+  <AiFillCloseCircle />
+</span>
 
 
 

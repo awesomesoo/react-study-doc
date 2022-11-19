@@ -3,7 +3,7 @@ import { TagListBox } from '../styled/galleryStyle'
 // https://react-icons.github.io/react-icons/icons?name=ai
 import { AiFillCloseCircle } from 'react-icons/ai'
 
-const TagList = ({ tagdata }) => {
+const TagList = ({ tagdata, onDel }) => {
   return (
     <TagListBox>
       <button>모두 삭제</button>
@@ -11,7 +11,8 @@ const TagList = ({ tagdata }) => {
         {tagdata.map((tag, index) => (
           <li key={index}>
             {tag}
-            <span>
+            <span onClick={() => onDel(tag)}>
+              {/* <span onClick={() => onDel(tag)}> // 이건 설계를 잘못함 */}
               <AiFillCloseCircle />
             </span>
           </li>

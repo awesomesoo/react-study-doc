@@ -113,11 +113,10 @@ export const TagListBox = styled.div`
     height: 50px;
     background: #000;
     color: #fff;
-    
   }
   ul {
     display: flex;
-    margin-top: 15px;
+    margin: 15px 0;
     li {
       margin-right: 25px;
       padding: 10px 25px;
