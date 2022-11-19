@@ -9,7 +9,9 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'CHANGE_COLOR':
       // 초기값이 객체이니까 리턴 해줄때도 아래와 같이 객체로 값은 전달해야한다.
-      return {}
+      return {
+        color: action.color,
+      }
     default:
       return state
   }
@@ -21,14 +23,30 @@ const Test6useReducer = () => {
     <div>
       <h2 style={{ color: state.color }}>컬러 : {state.color}</h2>
       <p>
-        {/* dispatch({ type: CHANGE_COLOR, color: 'red' }) */}
-        {/* dispatch({ type: CHANGE_COLOR, color: 'green' }) */}
-        {/* dispatch({ type: CHANGE_COLOR, color: 'blue' }) */}
-        {/* dispatch({ type: CHANGE_COLOR, color: 'pink' }) */}
-        <button>red - RED</button>
-        <button>green - GREEN</button>
-        <button>green - BLUE</button>
-        <button>green - PINK</button>
+        {/* dispatch({ type: 'CHANGE_COLOR', color: 'red' }) */}
+        {/* dispatch({ type: 'CHANGE_COLOR', color: 'green' }) */}
+        {/* dispatch({ type: 'CHANGE_COLOR', color: 'blue' }) */}
+        {/* dispatch({ type: 'CHANGE_COLOR', color: 'pink' }) */}
+        <button
+          onClick={() => dispatch({ type: 'CHANGE_COLOR', color: 'red' })}
+        >
+          red - RED
+        </button>
+        <button
+          onClick={() => dispatch({ type: 'CHANGE_COLOR', color: 'green' })}
+        >
+          green - GREEN
+        </button>
+        <button
+          onClick={() => dispatch({ type: 'CHANGE_COLOR', color: 'blue' })}
+        >
+          green - BLUE
+        </button>
+        <button
+          onClick={() => dispatch({ type: 'CHANGE_COLOR', color: 'pink' })}
+        >
+          green - PINK
+        </button>
       </p>
     </div>
   )
