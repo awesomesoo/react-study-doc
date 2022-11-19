@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react'
 import Test4ReactMemoSub from './Test4ReactMemoSub'
-
+/* 
+ React.memo 사용
+*/
 const Test4ReactMemo = () => {
   const [cnt1, setCnt1] = useState(10)
   const [cnt2, setCnt2] = useState(20)
