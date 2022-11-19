@@ -5,7 +5,8 @@ import React from 'react'
 import GlobalStyle from './sample/styled/Global'
 // import { Gallery } from './sample'
 // import Test2 from './components/Test2IndexOfIncludes'
-import Test from './components/Test4ReactMemo'
+// import Test from './components/Test4ReactMemo'
+import Test from './components/Test5'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       {/* <Test1 /> */}
       <GlobalStyle />
       {/* <Gallery /> */}
+
       <Test />
     </>
   )
