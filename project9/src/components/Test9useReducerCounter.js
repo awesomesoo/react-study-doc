@@ -6,8 +6,11 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'INCREMENT':
       return { count: state.count + action.step }
+    // 작업에 내용이 많으면 아래와 같이 ...state를 작성한다.
+    // return { ...state, count: state.count + action.step }
     case 'DECREMENT':
       return { count: state.count - action.step }
+    // return { ...state, count: state.count - action.step }
     default:
       return state
   }
