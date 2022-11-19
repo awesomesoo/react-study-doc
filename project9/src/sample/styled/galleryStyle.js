@@ -109,10 +109,22 @@ export const Box1 = styled.div`
 
 export const TagListBox = styled.div`
   button {
+    width: 120px;
+    height: 50px;
+    background: #000;
   }
   ul {
+    display: flex;
+    margin-top: 15px;
     li {
+      margin-right: 25px;
+      padding: 10px 25px;
+      border-radius: 30px;
+      border: 1px solid #999;
       span {
+        margin-left: 5px;
+        vertical-align: middle;
+        font-size: 25px;
       }
     }
   }

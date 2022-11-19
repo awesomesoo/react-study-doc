@@ -46,6 +46,8 @@ export default Gallery
 /* 
 react-icons 설치
 
-pixabay 키값 넣기
+pixabay 키 값 넣기
 
+
+Gallery에 TagList 불러오기
 */
