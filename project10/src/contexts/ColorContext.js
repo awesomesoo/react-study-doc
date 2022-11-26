@@ -7,12 +7,11 @@ import React, { createContext } from 'react'
 export const ColorContext = createContext() // 디폴트값 없으면 비워놔도된다.
 
 // 공급해주는 역할
-const ColorProvider = () => {
+const ColorProvider = props => {
   return (
     <ColorContext.Provider value="">
-      {/*     
-            <Color/> UI 디자인이 이 안에 들어오는 것이다.
-        */}
+      {/* <Color/> UI 디자인이 이 안에 들어오는 것이다. */}
+      {props.children}
     </ColorContext.Provider>
   )
 }
