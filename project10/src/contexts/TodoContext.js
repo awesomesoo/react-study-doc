@@ -20,7 +20,7 @@ const TodoProvider = ({ children }) => {
   }
 
   // 체크박스 토글
-  const onToggle = () => {
+  const onToggle = id => {
     alert('체크박스 토글')
   }
 
