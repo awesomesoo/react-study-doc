@@ -2,6 +2,7 @@ import React from 'react'
 import Color from './components/color/Color'
 import Counter from './components/count/Counter'
 import ColorProvider from './contexts/ColorContext'
+import CounterProvider from './contexts/CounterContext'
 
 const App = () => {
   return (
@@ -10,7 +11,9 @@ const App = () => {
         <Color />
       </ColorProvider>
       <hr />
-      <Counter />
+      <CounterProvider>
+        <Counter />
+      </CounterProvider>
     </div>
   )
 }
