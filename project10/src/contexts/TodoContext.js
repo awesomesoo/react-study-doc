@@ -21,7 +21,12 @@ const TodoProvider = ({ children }) => {
 
   // 체크박스 토글
   const onToggle = id => {
-    alert('체크박스 토글')
+    // alert('체크박스 토글')
+    setTodos(
+      todos.map(todo =>
+        todo.id == id ? { ...todo, isChk: !todo.isChk } : todo,
+      ),
+    )
   }
 
   return (
