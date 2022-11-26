@@ -3,10 +3,10 @@ import { TodoContext } from '../../contexts/TodoContext'
 
 const TodoItem = ({ todo }) => {
   const { id, text, isChk } = todo
-  const { onDel } = useContext(TodoContext)
+  const { onDel, onToggle } = useContext(TodoContext)
   return (
     <li>
-      <input type="checkbox" checked={isChk} />
+      <input type="checkbox" checked={isChk} onChange={() => onToggle(id)} />
       {text}
       <button onClick={() => onDel(id)}>삭제</button>
     </li>

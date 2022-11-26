@@ -19,8 +19,13 @@ const TodoProvider = ({ children }) => {
     setTodos(todos.filter(todos => todos.id !== id))
   }
 
+  // 체크박스 토글
+  const onToggle = () => {
+    alert('체크박스 토글')
+  }
+
   return (
-    <TodoContext.Provider value={{ todos, onDel }}>
+    <TodoContext.Provider value={{ todos, onDel, onToggle }}>
       {children}
     </TodoContext.Provider>
   )
