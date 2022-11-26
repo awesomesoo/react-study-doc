@@ -1,4 +1,4 @@
-import { useTodos } from '../../contexts/TodoUpgradeContext'
+import { useTodos } from '../../contexts/TodoStep2Context'
 
 const TodoInput = () => {
   const { onAdd, changeInput, text } = useTodos()

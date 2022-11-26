@@ -23,7 +23,7 @@ const TodoProvider = ({ children }) => {
   // 삭제
   const onDel = id => {
     // alert('삭제')
-    setTodos(todos.filter(todos => todos.id !== id))
+    setTodos(todos.filter(todo => todo.id !== id))
   }
 
   // 체크박스 토글
@@ -49,11 +49,11 @@ const TodoProvider = ({ children }) => {
   }
 
   return (
-    <TodoContext.Provider
+    <TodoUpgradeContext.Provider
       value={{ todos, onDel, onToggle, onAdd, changeInput, text }}
     >
       {children}
-    </TodoContext.Provider>
+    </TodoUpgradeContext.Provider>
   )
 }
 

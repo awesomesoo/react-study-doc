@@ -1,8 +1,9 @@
-import { useTodos } from '../../contexts/TodoUpgradeContext'
+import React, { useContext } from 'react'
+import { TodoContext } from '../../contexts/TodoContext'
 
 const TodoItem = ({ todo }) => {
   const { id, text, isChk } = todo
-  const { onDel, onToggle } = useTodos()
+  const { onDel, onToggle } = useContext(TodoContext)
   return (
     <li style={{ color: isChk ? 'tomato' : '#000' }}>
       <input type="checkbox" checked={isChk} onChange={() => onToggle(id)} />
