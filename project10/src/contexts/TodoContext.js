@@ -12,12 +12,22 @@ const TodoProvider = ({ children }) => {
     { id: 4, text: '유재석', isChk: false },
     { id: 5, text: '강호동', isChk: true },
   ])
+
+  // 삭제
+  const onDel = () => {
+    alert('삭제')
+  }
+
   return (
-    <TodoContext.Provider value={{ todos }}>{children}</TodoContext.Provider>
+    <TodoContext.Provider value={{ todos, onDel }}>
+      {children}
+    </TodoContext.Provider>
   )
 }
 
 export default TodoProvider
 /* 
     다이렉트로 TodoList에서 사용할 수 있다.
+
+    꼭 value의 객체로 넘겨줘야한다.
 */
