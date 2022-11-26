@@ -1,10 +1,11 @@
 import React from 'react'
 
-const TodoItem = () => {
+const TodoItem = ({ todo }) => {
+  const { id, text, isChk } = todo
   return (
     <li>
-      <input type="checkbox" />
-      내용내용
+      <input type="checkbox" checked={isChk} />
+      {text}
       <button>삭제</button>
     </li>
   )
