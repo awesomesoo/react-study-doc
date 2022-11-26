@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { TodoContext } from '../../contexts/TodoContext'
 import TodoItem from './TodoItem'
 
 const TodoList = () => {
+  const { todos } = useContext(TodoContext)
   return (
     <ul>
-      <TodoItem />
+      {todos.map(todo => (
+        <TodoItem />
+      ))}
     </ul>
   )
 }

@@ -18,3 +18,6 @@ const TodoProvider = ({ children }) => {
 }
 
 export default TodoProvider
+/* 
+    다이렉트로 TodoList에서 사용할 수 있다.
+*/
