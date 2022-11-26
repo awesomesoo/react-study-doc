@@ -1,10 +1,13 @@
 import React from 'react'
-import Color from './components/color/color'
+import Color from './components/color/Color'
+import ColorProvider from './contexts/ColorContext'
 
 const App = () => {
   return (
     <div>
-      <Color />
+      <ColorProvider>
+        <Color />
+      </ColorProvider>
     </div>
   )
 }
