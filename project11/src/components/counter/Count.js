@@ -22,3 +22,19 @@ const Count = () => {
 }
 
 export default Count
+/* 
+
+5. components안에 UI에 액션, state 연결해서 사용하기
+
+* useSelector : 상태값 처리
+* useDispatch : 액션처리
+
+    import { useDispatch , useSelector } from 'react-redux'
+
+    //상태값가져오기
+    const state담을이름 = useSelector( state => state.리듀서파일키.state명 )
+
+    const dispatch = useDispatch() 
+    <button onClick={() => dispatch( 리듀에서내보낸액션명() )}>변경</button>
+
+*/
