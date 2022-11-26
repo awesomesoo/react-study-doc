@@ -14,8 +14,9 @@ const TodoProvider = ({ children }) => {
   ])
 
   // 삭제
-  const onDel = () => {
-    alert('삭제')
+  const onDel = id => {
+    // alert('삭제')
+    setTodos(todos.filter(todos => todos.id !== id))
   }
 
   return (

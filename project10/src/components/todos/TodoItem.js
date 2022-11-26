@@ -8,7 +8,7 @@ const TodoItem = ({ todo }) => {
     <li>
       <input type="checkbox" checked={isChk} />
       {text}
-      <button onClick={onDel}>삭제</button>
+      <button onClick={() => onDel(id)}>삭제</button>
     </li>
   )
 }
