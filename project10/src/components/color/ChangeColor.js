@@ -17,3 +17,7 @@ const ChangeColor = () => {
 }
 
 export default ChangeColor
+/* 
+const { color, changeColor } = useContext(ChangeColorContext) 
+이렇게 계속 관리자를 불러야야하는게 단점
+*/
