@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useRef } from 'react'
 
 export const TodoContext = createContext()
 
@@ -12,6 +12,10 @@ const TodoProvider = ({ children }) => {
     { id: 4, text: '유재석', isChk: false },
     { id: 5, text: '강호동', isChk: true },
   ])
+
+  const no = useRef(todos.lenghth + 1)
+
+  const [text, setText] = useState('')
 
   // 삭제
   const onDel = id => {
@@ -29,8 +33,22 @@ const TodoProvider = ({ children }) => {
     )
   }
 
+  // 추가
+  const onAdd = text => {
+    setTodos([...todos, { id: no.current++, text, isChk: false }])
+    setText('')
+  }
+
+  // 글자
+  const changeInput = e => {
+    const { value } = e.target
+    setText(value)
+  }
+
   return (
-    <TodoContext.Provider value={{ todos, onDel, onToggle }}>
+    <TodoContext.Provider
+      value={{ todos, onDel, onToggle, onAdd, changeInput, text }}
+    >
       {children}
     </TodoContext.Provider>
   )
