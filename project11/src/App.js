@@ -1,6 +1,7 @@
 import React from 'react'
 import Color from './components/color/Color'
 import Count from './components/counter/Count'
+import ChangeColor from './components/color/ChangeColor'
 
 const App = () => {
   return (
@@ -8,6 +9,8 @@ const App = () => {
       <Color />
       <hr />
       <Count />
+      <hr />
+      <ChangeColor />
       <hr />
     </div>
   )
