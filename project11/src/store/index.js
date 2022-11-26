@@ -1,12 +1,14 @@
 import { combineReducers } from 'redux'
 import color from './modules/color'
 import count from './modules/count'
+import changecolor from './modules/changecolor'
 
 export default combineReducers({
   // 리듀서이름1,
   // 키 : 리듀서이름2,
   colorA: color, // colorA: color를 color 라고 써도 된다.
   count,
+  changecolor,
 })
 /* 
 
