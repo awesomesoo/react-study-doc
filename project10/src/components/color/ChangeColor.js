@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ChangeColorContext } from '../../contexts/ChangeColorContext'
 /* 만약 이런게 여러개 있다고 하면 어떻게 처리할 것인가? */
 const ChangeColor = () => {
+  const { color, changeColor } = useContext(ChangeColorContext)
+
   return (
     <div>
-      <h2>ChangeColor : </h2>
+      <h2>ChangeColor : {color}</h2>
       <p>
-        <button>red</button>
-        <button>green</button>
-        <button>pink</button>
+        <button onClick={() => changeColor('red')}>red</button>
+        <button onClick={() => changeColor('green')}>green</button>
+        <button onClick={() => changeColor('pink')}>pink</button>
       </p>
     </div>
   )
