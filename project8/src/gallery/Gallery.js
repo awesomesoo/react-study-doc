@@ -3,6 +3,7 @@ import axios from 'axios'
 import GallerySearch from './GallerySearch'
 import GalleryList from './GalleryList'
 import { GalleryBox } from '../styled/galleryStyle'
+import { apikey } from '../../gallerykey.env'
 
 const Gallery = () => {
   const [data, setData] = useState([])
@@ -11,7 +12,7 @@ const Gallery = () => {
   const [text, setText] = useState('flower')
 
   useEffect(() => {
-    const API_KEY = '31264567-b2f4129d718fb9580a6f88302'
+    const apikey = config.apikey
     const url = `https://pixabay.com/api/?key=${API_KEY}&q=${text}s&image_type=photo`
     axios
       .get(url)
@@ -39,7 +40,7 @@ const Gallery = () => {
   }
 
   return (
-    <GalleryBox width="1200px">
+    <GalleryBox width='1200px'>
       <h2>pixabay - api</h2>
       <GallerySearch onSearch={onSearch} />
       <GalleryList data={data} />
