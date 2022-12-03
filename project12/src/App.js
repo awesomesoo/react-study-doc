@@ -29,9 +29,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/ceo" element={<Ceo />} />
           <Route path="/about" element={<About />} />
+          {/* 아래의 방법도 그렇게 좋은 방법은 아니다 */}
           <Route path="/profile" element={<Profile />}>
             {/* path="/profile/:name" /> */}
-            {/* 아래의 방법도 그렇게 좋은 방법은 아니다 */}
             <Route path=":name" />
           </Route>
           <Route path="*" element={<NotFiles />} />
