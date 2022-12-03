@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { red, green } from '../../store/modules/color'
+import { red, green, blue, pink } from '../../store/modules/color'
 
 const Color = () => {
   const color = useSelector(state => state.colorPage.color)
@@ -12,8 +12,8 @@ const Color = () => {
       <p>
         <button onClick={() => dispatch(red())}>red</button>
         <button onClick={() => dispatch(green())}>green</button>
-        <button>blue</button>
-        <button>pink</button>
+        <button onClick={() => dispatch(blue())}>blue</button>
+        <button onClick={() => dispatch(pink())}>pink</button>
       </p>
     </div>
   )
