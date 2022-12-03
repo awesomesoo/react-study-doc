@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useAxios } from '../hooks/useAxios'
 
 const MemberDetail = () => {
@@ -9,6 +9,15 @@ const MemberDetail = () => {
   const { data } = useAxios(
     `https://jsonplaceholder.typicode.com/users/${memberID}`,
   )
+
+  const navigate = useNavigate()
+
+  const onGo = () => {
+    // 아래와 같이 -1 해도 된다.
+    // navigate(-1)
+    navigate('/')
+    // navigate(상대경로, 절대경로, 숫자(양수/음수)) - 1 다음페이지, -1 이전페이지
+  }
 
   const { username, email, phone, website } = data
 
@@ -25,7 +34,7 @@ const MemberDetail = () => {
       <h4>이메일 : {email}</h4>
       <h4>연락처 : {phone}</h4>
       <h4>웹사이트 : {website}</h4>
-      <button>목록</button>
+      <button onClick={onGo}>목록</button>
     </div>
   )
 }

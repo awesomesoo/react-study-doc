@@ -6,16 +6,17 @@ const Member = ({ item }) => {
 
   const navigate = useNavigate()
 
+  const onGo = () => {
+    navigate(`/member/${id}`)
+    // navigate(상대경로, 절대경로, 숫자(양수/음수)) - 1 다음페이지, -1 이전페이지
+  }
+
   const css = {
     margin: 20,
     padding: 15,
     border: '1px solid #999',
   }
 
-  const onGo = () => {
-    navigate(`/member/${id}`)
-    // navigate(상대경로, 절대경로, 숫자(양수/음수)) - 1 다음페이지, -1 이전페이지
-  }
   return (
     <div style={css}>
       <h2>Member</h2>
