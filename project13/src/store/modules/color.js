@@ -13,7 +13,6 @@ export const colorSlice = createSlice({
     blue: (state, action) => {
       state.color = 'blue'
     },
-
     pink: (state, action) => {
       state.color = 'pink'
     },

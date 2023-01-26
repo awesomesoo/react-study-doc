@@ -1,6 +1,8 @@
 import React from 'react'
 import Color from './components/color/Color'
 import Count from './components/counter/Count'
+import ChangeColor from './components/color/ChangeColor'
+import Todos from './components/todos/Todos'
 
 const App = () => {
   return (
@@ -8,6 +10,10 @@ const App = () => {
       <Color />
       <hr />
       <Count />
+      <hr />
+      <ChangeColor />
+      <hr />
+      <Todos />
     </div>
   )
 }
